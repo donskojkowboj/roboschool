@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .greeting {
+        text-align: center;
+        font-family: 'Jost';
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+}
