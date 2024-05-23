@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.about {
+    min-height: 614px;
+    padding-top: 120px;
+    &__description {
+        font-weight: 400;
+        font-size: 30px;
+        &_bold {
+            font-size: 30px;
+            font-weight: 600;  
+        } 
+    }
+    &__list {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_item {
+            &-number {
+                color: $red-color;
+                font-size: 70px;
+                font-weight: 600;
+            }
+        }
+    }
+}

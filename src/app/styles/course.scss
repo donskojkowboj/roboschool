@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+.course {
+    min-height: 460px;
+    background-color: $red-color;
+    color: $white-color;
+    position: relative;
+    
+    &__title {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &__descr {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+    }
+    &__container {
+        padding-top: 87px;
+        display: flex;
+        color: $white-color;
+        justify-content: space-around;
+        &-text {
+            margin-top: 19px;
+        }
+        &-title {
+            font-size: 36px;
+            font-weight: 600;
+        }
+        &-descr {
+            margin-top: 20px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        &-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &-input {
+            width: 500px;
+            height: 64px;
+            padding-left: 20px;
+            padding-top: 4px;
+            color: rgba(40, 41, 68, 0.70);
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+    &__percent {
+        display: flex;
+        overflow: hidden;
+    }
+   
+}

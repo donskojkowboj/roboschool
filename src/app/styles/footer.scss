@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.footer {
+    background: $dark-color;   
+    color: $white-color;
+    min-height: 160px;
+    padding: 40px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    &__phone {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__copyright {
+        margin-top: 5px;
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+}

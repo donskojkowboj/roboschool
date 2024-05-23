@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+.package {
+    padding-top: 130px;
+    padding-bottom: 140px;
+    min-height: 720px;
+    &__title {
+        color: $dark-color;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    &__cards {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_item {
+            padding: 40px;
+            width: 360px;
+            height: 460px;
+            border-radius: 20px;
+            border: 1px solid rgba(20, 16, 36, 0.20);
+            color: $dark-color;
+            transition: background-color 0.4s ease-in-out,
+                        color 0.4s ease-in-out,
+                        transform 0.4s ease-in-out;
+            &:hover {
+                background-color: $dark-color;
+                color: $white-color;
+                transform: scale(1.05);
+            }
+            &-title {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 600;
+            }
+            &-price {
+                margin-top: 63px;
+                text-align: center;
+                font-size: 50px;
+                font-weight: 600;
+            }
+            &-descr {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -1,13 +1,70 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    .greeting {
-        text-align: center;
-        font-family: 'Jost';
-        font-weight: 700;
-        font-size: 30px;
+@import './variables.scss';
+.promo {
+    position: relative;
+    min-height: 1080px;
+    background: $dark-color;    
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $white-color;
+        padding: 30px 100px 0 100px;
+        &_title {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .menu {
+            padding-top: 8px;
+            &__list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 40px;
+                &_item {
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .phone {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    &__main {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &-content {
+            color: $white-color;
+            &_title {
+                font-size: 50px;
+                font-weight: 600;
+            }
+            &_subtitle {
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+        &-picture {
+            width: 783px;
+            height: 783px;
+            border-radius: 100%;
+            border: 80px solid $white-color;
+            &_student {
+                position: absolute;
+                transform: translateX(80px) translateY(-142px);
+                // width: 515px;
+                // height: 916px;
+            }
+        }
     }
 
 }
+
+
+
+
