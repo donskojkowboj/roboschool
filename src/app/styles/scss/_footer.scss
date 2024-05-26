@@ -4,18 +4,20 @@
     background: $dark-color;   
     color: $white-color;
     min-height: 160px;
-    padding: 40px 100px 0 100px;
+    padding: 40px 100px;
     display: flex;
     justify-content: space-between;
+    &__schoolname {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
     &__phone {
         font-size: 30px;
         font-weight: 600;
     }
-    &__title {
-        font-size: 30px;
-        font-weight: 700;
-    }
     &__copyright {
+        display: block;
         margin-top: 5px;
         color: rgba(255, 255, 255, 0.70);
         font-size: 16px;

@@ -2,8 +2,7 @@
 
 .benefits {
     background: #F9F9F9;
-    min-height: 485px;
-    padding-top: 100px;
+    padding: 100px 0;
     &__title {
         color: $dark-color;
         font-size: 50px;
@@ -13,7 +12,7 @@
         margin-top: 60px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         &-item {
             &-title {
                 color: $dark-color;
@@ -21,6 +20,7 @@
                 font-weight: 600;
             }
             &-descr {
+                padding-right: 10px;
                 margin-top: 20px;
                 color: rgba(20, 16, 36, 0.70);
                 font-size: 18px;

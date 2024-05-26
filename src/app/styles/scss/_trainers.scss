@@ -1,17 +1,22 @@
 .trainers {
     padding-top: 120px;
-    min-height: 960px;
-    overflow: hidden;
+
+    &__title {
+        font-size: 50px;
+        font-weight: 600;
+    }
     &__list {
         margin-top: 60px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 40px;
+        overflow-x: scroll;
         &_item {
             
             &-name {
                 margin-top: 20px;
+                font-weight: 600;
             }
             &-descr {
                 margin-top: 10px;
@@ -34,39 +39,15 @@
         flex-direction: row;
         justify-content: space-between;
         &_scrollbar {
-            -webkit-appearance: none;
-            appearance: none;
-            outline: none;
-            margin-top: 17px;
             width: 360px;
             height: 5px;
             border-radius: 40px;
             background: rgba(20, 16, 36, 0.08);
-            &:hover {
-                opacity: 1;
-                }
-            
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 260px;
-                height: 5px;
-                background: $dark-color;
-                cursor: pointer;
-                box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-            }
             &_scroll {
                 width: 260px;
                 height: 5px;
                 border-radius: 40px;
                 background: $dark-color;
-                overflow-x: scroll;
-
-            }
-        }
-        &_arrows {
-            &_left {
-                border: none;
             }
         }
     }

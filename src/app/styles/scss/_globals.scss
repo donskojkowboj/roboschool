@@ -1,0 +1,23 @@
+.container {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+.phone {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-padding-top: 107px;
+    scroll-snap-type: y mandatory;
+    section {
+        scroll-snap-align: start;
+    }
+}
