@@ -3,25 +3,18 @@
 .footer {
     background: $dark-color;   
     color: $white-color;
-    min-height: 160px;
-    padding: 40px 100px;
+    height: 159px;
     display: flex;
     justify-content: space-between;
     &__schoolname {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-    }
-    &__phone {
-        font-size: 30px;
-        font-weight: 600;
     }
     &__copyright {
+        margin-top: 10px;
         display: block;
-        margin-top: 5px;
         color: rgba(255, 255, 255, 0.70);
         font-size: 16px;
         font-weight: 400;
     }
-
 }

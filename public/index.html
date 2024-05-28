@@ -10,203 +10,211 @@
 </head>
 
 <body>
-    <div class="scroller">
-        
-        <header class="header">
-            <a class="logo" href="#top">ROBO.SCHOOL</a>
+
+    <header class="header">
+        <div class="container-wide">
+            <a class="logo" href="/">ROBO.SCHOOL</a>
             <nav class="menu">
-                    <a class="menu_item" href="#about">О школе</a>
-                    <a class="menu_item" href="#package">Стоимость</a>
-                    <a class="menu_item" href="#">Тренеры</a>
+                <ul class="menu__list">
+                    <li class="menu__list_item">
+                        <a href="#about">О школе</a>
+                    </li>
+                    <li class="menu__list_item">
+                        <a href="#package">Стоимость</a>
+                    </li>
+                    <li class="menu__list_item">
+                        <a href="#trainers">Тренеры</a>
+                    </li>
+                </ul>
             </nav>
             <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
-        </header>
+        </div>  
+    </header>
 
-        <section class="promo" id="top">
-            <div class="container">
-                <div class="promo__main">      
-                    <div class="promo__main-content">
-                        <h1 class="promo__main-content_title">ROBO SCHOOL</h1>
-                        <p class="promo__main-content_subtitle">Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
-                        <a href="#package" class="promo__main-content_link">
-                            Записаться на курс
-                        </a>
-                    </div>
 
-                    <img class="promo__main-picture" src="/static/img/promo/student.png" alt="student">
-                    <div class="promo__main-circle"></div>
+    <section class="promo">
+        <div class="container">
+            <div class="promo__content">
+                <h1 class="promo__content_title">ROBO SCHOOL</h1>
+                <p class="promo__content_subtitle">Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
+                <a href="#package" class="promo__content_link">
+                    Записаться на курс
+                </a>
+                <img class="promo__content_picture" src="/static/img/promo/student.png" alt="student">
+            </div>
+           
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="about__description">
+                <b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования
+            </h2>
+
+            <div class="about__list">
+                <div class="about__list_item">
+                    <span class="about__list_item-number">10</span>
+                    <div class="about__list_item-descr">УМК по различным направлениям по робототехнике</div>
+                </div>
+                <div class="about__list_item">
+                    <span class="about__list_item-number">20</span>
+                    <div class="about__list_item-descr">Школ, в которых запущена робототехника</div>
+                </div>
+                <div class="about__list_item">
+                    <span class="about__list_item-number">100</span>
+                    <div class="about__list_item-descr">Педагогов прошедших курсы повышения квалификации</div>
+                </div>
+                <div class="about__list_item">
+                    <span class="about__list_item-number">10 000</span>
+                    <div class="about__list_item-descr">Обученных детей на базе собственных центров</div>
                 </div>
             </div>
-        </section>
-
-        <section class="about">
-            <div class="container">
-                <h2 class="about__description">
-                    <b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования
-                </h2>
+            
+        </div>
+    </section>
     
-                <div class="about__list">
-                    <div class="about__list_item">
-                        <span class="about__list_item-number">10</span>
-                        <div class="about__list_item-descr">УМК по различным направлениям по робототехнике</div>
-                    </div>
-                    <div class="about__list_item">
-                        <span class="about__list_item-number">20</span>
-                        <div class="about__list_item-descr">Школ, в которых запущена робототехника</div>
-                    </div>
-                    <div class="about__list_item">
-                        <span class="about__list_item-number">100</span>
-                        <div class="about__list_item-descr">Педагогов прошедших курсы повышения квалификации</div>
-                    </div>
-                    <div class="about__list_item">
-                        <span class="about__list_item-number">10 000</span>
-                        <div class="about__list_item-descr">Обученных детей на базе собственных центров</div>
-                    </div>
+    <section class="benefits">
+        <div class="container">
+            <h2 class="benefits__title">
+                Что вы получите после курса
+            </h2>
+            <div class="benefits__list">
+                <div class="benefits__list-item">
+                    <h3 class="benefits__list-item-title">Удостоверение</h3>
+                    <p class="benefits__list-item-descr">Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
                 </div>
-                
-            </div>
-        </section>
-        
-        <section class="benefits">
-            <div class="container">
-                <h2 class="benefits__title">
-                    Что вы получите после курса
-                </h2>
-                <div class="benefits__list">
-                    <div class="benefits__list-item">
-                        <h3 class="benefits__list-item-title">Удостоверение</h3>
-                        <p class="benefits__list-item-descr">Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
-                    </div>
-                    <div class="benefits__list-item">
-                        <h3 class="benefits__list-item-title">Знания</h3>
-                        <p class="benefits__list-item-descr">По основам разработки учебно-методических комплексов по робототехнике и программированию</p>
-                    </div>
-                    <div class="benefits__list-item">
-                        <h3 class="benefits__list-item-title">Практику</h3>
-                        <p class="benefits__list-item-descr">Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
-                    </div>
+                <div class="benefits__list-item">
+                    <h3 class="benefits__list-item-title">Знания</h3>
+                    <p class="benefits__list-item-descr">По основам разработки учебно-методических комплексов по робототехнике и программированию</p>
+                </div>
+                <div class="benefits__list-item">
+                    <h3 class="benefits__list-item-title">Практику</h3>
+                    <p class="benefits__list-item-descr">Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
                 </div>
             </div>
-        </section>
-    
-       <section class="trainers">
-            <div class="container">
-                <h2 class="trainers__title">
-                    Профессиональные тренеры
-                </h2>
-    
-                <div class="trainers__list">
-                    <div class="trainers__list_item">
-                        <img src="/static/img/trainers/irina.png" alt="irina">
-                        <div class="trainers__list_item-name">Ирина Лайм</div>
-                        <p class="trainers__list_item-descr">преподаватель по робототехнике</p>
-                        <button class="trainers__list_item-more">Подробнее</button>
-                    </div>
-                    <div class="trainers__list_item">
-                        <img src="/static/img/trainers/marina.png" alt="marina">
-                        <div class="trainers__list_item-name">Марина Орлова</div>
-                        <p class="trainers__list_item-descr">преподаватель по робототехнике</p>
-                        <button class="trainers__list_item-more">Подробнее</button>
-                    </div>
-                    <li class="trainers__list_item">
-                        <img src="/static/img/trainers/maksim.png" alt="maksim">
-                        <div class="trainers__list_item-name">Максим Петров</div>
-                        <p class="trainers__list_item-descr">преподаватель по программированию</p>
-                        <button class="trainers__list_item-more">Подробнее</button>
-                    </li>
-                    <div class="trainers__list_item">
-                        <img src="/static/img/trainers/konstantin.png" alt="konstantin">
-                        <div class="trainers__list_item-name">Константин Назаров</div>
-                        <p class="trainers__list_item-descr">преподаватель по робототехнике</p>
-                        <button class="trainers__list_item-more">Подробнее</button>
-                    </div>
-                    <div class="trainers__list_item">
-                        <img src="/static/img/trainers/liza.png" alt="liza">
-                        <div class="trainers__list_item-name">Лиза Весенняя</div>
-                        <p class="trainers__list_item-descr">преподаватель по программированию</p>
-                        <button class="trainers__list_item-more">Подробнее</button>
-                    </div>
-                </div>
-    
-                <div class="trainers__buttons">
-                    <div class="trainers__buttons_scrollbar">
-                        <div class="trainers__buttons_scrollbar_scroll"></div>
-                    </div>
+        </div>
+    </section>
 
-                    <div class="trainer__buttons_arrows">
-                        <button class="trainer__buttons_arrows-left">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33317 20C3.33317 29.2 10.8165 36.6666 19.9998 36.6666L20.4661 36.6602C29.4508 36.413 36.6665 29.044 36.6665 20C36.6665 10.8166 29.1998 3.33331 19.9998 3.33331C10.8165 3.33331 3.33317 10.8166 3.33317 20ZM23.2998 13.3333C23.7832 13.8333 23.7832 14.6166 23.2832 15.1L18.3665 20L23.2832 24.9C23.7832 25.3833 23.7832 26.1833 23.2998 26.6666C22.7998 27.1666 22.0165 27.1666 21.5332 26.6666L15.7165 20.8833C15.4832 20.65 15.3498 20.3333 15.3498 20C15.3498 19.6666 15.4832 19.35 15.7165 19.1166L21.5332 13.3333C21.7665 13.0833 22.0832 12.9666 22.3998 12.9666C22.7332 12.9666 23.0498 13.0833 23.2998 13.3333Z" fill="#141024"/>
-                                </svg>
-                        </button>
-                        <button class="trainer__buttons_arrows-right">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M36.6668 20C36.6668 29.2 29.1835 36.6666 20.0002 36.6666L19.5339 36.6602C10.5492 36.413 3.3335 29.044 3.3335 20C3.3335 10.8166 10.8002 3.33331 20.0002 3.33331C29.1835 3.33331 36.6668 10.8166 36.6668 20ZM16.7002 13.3333C16.2168 13.8333 16.2168 14.6166 16.7168 15.1L21.6335 20L16.7168 24.9C16.2168 25.3833 16.2168 26.1833 16.7002 26.6666C17.2002 27.1666 17.9835 27.1666 18.4668 26.6666L24.2835 20.8833C24.5168 20.65 24.6502 20.3333 24.6502 20C24.6502 19.6666 24.5168 19.35 24.2835 19.1166L18.4668 13.3333C18.2335 13.0833 17.9168 12.9666 17.6002 12.9666C17.2668 12.9666 16.9502 13.0833 16.7002 13.3333Z" fill="#141024"/>
-                                </svg>
-                                
-                        </button>
-                    </div>
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <h2 class="trainers__title">
+                Профессиональные тренеры
+            </h2>
+
+            <div class="trainers__list">
+                <div class="trainers__list_item">
+                    <img src="/static/img/trainers/irina.png" alt="irina">
+                    <div class="trainers__list_item-name">Ирина Лайм</div>
+                    <div class="trainers__list_item-descr">преподаватель по робототехнике</div>
+                    <button class="trainers__list_item-more">Подробнее</button>
+                </div>
+                <div class="trainers__list_item">
+                    <img src="/static/img/trainers/marina.png" alt="marina">
+                    <div class="trainers__list_item-name">Марина Орлова</div>
+                    <div class="trainers__list_item-descr">преподаватель по робототехнике</div>
+                    <button class="trainers__list_item-more">Подробнее</button>
+                </div>
+                <div class="trainers__list_item">
+                    <img src="/static/img/trainers/maksim.png" alt="maksim">
+                    <div class="trainers__list_item-name">Максим Петров</div>
+                    <div class="trainers__list_item-descr">преподаватель по программированию</div>
+                    <button class="trainers__list_item-more">Подробнее</button>
+                </div>
+                <div class="trainers__list_item">
+                    <img src="/static/img/trainers/konstantin.png" alt="konstantin">
+                    <div class="trainers__list_item-name">Константин Назаров</div>
+                    <div class="trainers__list_item-descr">преподаватель по робототехнике</div>
+                    <button class="trainers__list_item-more">Подробнее</button>
+                </div>
+                <div class="trainers__list_item">
+                    <img src="/static/img/trainers/liza.png" alt="liza">
+                    <div class="trainers__list_item-name">Лиза Весенняя</div>
+                    <div class="trainers__list_item-descr">преподаватель по программированию</div>
+                    <button class="trainers__list_item-more">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="trainers__buttons">
+                <div class="trainers__buttons_scrollbar">
+                    <div class="trainers__buttons_scrollbar_scroll"></div>
                 </div>
 
-            </div>
-       </section>
-    
-       <section class="package" id="package">
-            <div class="container">
-                <h2 class="package__title">
-                    Выберите нужный пакет
-                </h2>
-    
-                <div class="package__cards">
-                    <div class="package__cards_item package__cards_item_active">
-                        <div class="package__cards_item-title">pro</div>
-                        <p class="package__cards_item-price">20.000 ₽</p>
-                        <p class="package__cards_item-descr">УМК по робототехнике и программированию</p>
-                        <a href="#" class="package__cards_item-link">Оставить заявку</a>
-                    </div>
-                    <div class="package__cards_item">
-                        <h3 class="package__cards_item-title">robo</h3>
-                        <p class="package__cards_item-price">15.000 ₽</p>
-                        <p class="package__cards_item-descr">УМК по робототетхнике </p>
-                        <a href="#" class="package__cards_item-link">Оставить заявку</a>
-                    </div>
-                    <div class="package__cards_item">
-                        <h3 class="package__cards_item-title">prog</h3>
-                        <p class="package__cards_item-price">10.000 ₽</p>
-                        <p class="package__cards_item-descr">УМК по программированию</p>
-                        <a href="#" class="package__cards_item-link">Оставить заявку</a>
-                    </div>
+                <div class="trainer__buttons_arrows">
+                    <button class="trainer__buttons_arrows-left">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33317 20C3.33317 29.2 10.8165 36.6666 19.9998 36.6666L20.4661 36.6602C29.4508 36.413 36.6665 29.044 36.6665 20C36.6665 10.8166 29.1998 3.33331 19.9998 3.33331C10.8165 3.33331 3.33317 10.8166 3.33317 20ZM23.2998 13.3333C23.7832 13.8333 23.7832 14.6166 23.2832 15.1L18.3665 20L23.2832 24.9C23.7832 25.3833 23.7832 26.1833 23.2998 26.6666C22.7998 27.1666 22.0165 27.1666 21.5332 26.6666L15.7165 20.8833C15.4832 20.65 15.3498 20.3333 15.3498 20C15.3498 19.6666 15.4832 19.35 15.7165 19.1166L21.5332 13.3333C21.7665 13.0833 22.0832 12.9666 22.3998 12.9666C22.7332 12.9666 23.0498 13.0833 23.2998 13.3333Z" fill="#141024"/>
+                            </svg>
+                    </button>
+                    <button class="trainer__buttons_arrows-right">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.6668 20C36.6668 29.2 29.1835 36.6666 20.0002 36.6666L19.5339 36.6602C10.5492 36.413 3.3335 29.044 3.3335 20C3.3335 10.8166 10.8002 3.33331 20.0002 3.33331C29.1835 3.33331 36.6668 10.8166 36.6668 20ZM16.7002 13.3333C16.2168 13.8333 16.2168 14.6166 16.7168 15.1L21.6335 20L16.7168 24.9C16.2168 25.3833 16.2168 26.1833 16.7002 26.6666C17.2002 27.1666 17.9835 27.1666 18.4668 26.6666L24.2835 20.8833C24.5168 20.65 24.6502 20.3333 24.6502 20C24.6502 19.6666 24.5168 19.35 24.2835 19.1166L18.4668 13.3333C18.2335 13.0833 17.9168 12.9666 17.6002 12.9666C17.2668 12.9666 16.9502 13.0833 16.7002 13.3333Z" fill="#141024"/>
+                            </svg>
+                            
+                    </button>
                 </div>
             </div>
-       </section>
-    
-       <section class="course">
-            <div class="container">
-                <div class="course__container">
-                    <div class="course__container-text">
-                        <h2 class="course__container-title">Запишитесь на курс со скидкой 10%</h2>
-                        <p class="course__container-descr">Акция действительна до 10 марта 2022 года</p>
-                    </div>
 
-                    <form action="submit" class="course__container-form">
-                        <input placeholder="Имя" class="course__container-input" type="text">
-                        <input placeholder="Телефон" class="course__container-input" type="tel">
-                        <input placeholder="E-mail" class="course__container-input" type="email">
-                        <button type="submit" class="course__container-button">Оформить заявку<button>
-                    </form>
+        </div>
+    </section>
+
+    <section class="package" id="package">
+        <div class="container">
+            <h2 class="package__title">
+                Выберите нужный пакет
+            </h2>
+
+            <div class="package__cards">
+                <div class="package__cards_item package__cards_item_active">
+                    <div class="package__cards_item-title">pro</div>
+                    <span class="package__cards_item-price">20.000 ₽</span>
+                    <span class="package__cards_item-descr">УМК по робототехнике и программированию</span>
+                    <a href="#" class="package__cards_item-link">Оставить заявку</a>
+                </div>
+                <div class="package__cards_item">
+                    <h3 class="package__cards_item-title">robo</h3>
+                    <span class="package__cards_item-price">15.000 ₽</span>
+                    <span class="package__cards_item-descr">УМК по робототетхнике </span>
+                    <a href="#" class="package__cards_item-link">Оставить заявку</a>
+                </div>
+                <div class="package__cards_item">
+                    <h3 class="package__cards_item-title">prog</h3>
+                    <span class="package__cards_item-price">10.000 ₽</span>
+                    <span class="package__cards_item-descr">УМК по программированию</span>
+                    <a href="#" class="package__cards_item-link">Оставить заявку</a>
                 </div>
             </div>
-       </section>
-    
-       <footer class="footer">
+
+        </div>
+    </section>
+
+    <section class="course">
+        <div class="container">
+            <div class="course__container">
+                <div class="course__container-text">
+                    <h2 class="course__container-title">Запишитесь на курс со скидкой 10%</h2>
+                    <p class="course__container-descr">Акция действительна до 10 марта 2022 года</p>
+                </div>
+
+                <form action="submit" class="course__container-form">
+                    <input placeholder="Имя" class="course__container-input" type="text">
+                    <input placeholder="Телефон" class="course__container-input" type="tel">
+                    <input placeholder="E-mail" class="course__container-input" type="email">
+                    <button type="submit" class="course__container-button">Оформить заявку<button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-wide">
             <div class="footer__schoolname">
-                <a class="logo" href="#top">ROBO.SCHOOL</a>
+                <a class="logo" href="/">ROBO.SCHOOL</a>
                 <span class="footer__copyright">© ROBO.SCHOOL</span>
             </div>
-        
             <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
-       </footer>
+        </div>
+    </footer>
 
-    </div>
 </body>
 </html>

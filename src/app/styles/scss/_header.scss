@@ -1,26 +1,28 @@
 @import './variables';
 
+
 .header {
-    position: sticky;
+    background: $dark-color; 
     top: 0;
     height: 107px;
-    padding: 0 100px;
+    position: sticky;   
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     z-index: 1000;
     color: $white-color;
-    background: $dark-color;    
-        .menu {
-            padding-top: 8px;
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        &__list {
             display: flex;
             flex-direction: row;
             gap: 40px;
-                &_item {
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: 400;
-                }
+            &_item {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 400;
+            }
         }
     }
+}
+

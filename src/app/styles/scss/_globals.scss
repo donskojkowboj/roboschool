@@ -1,6 +1,50 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: Jost;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  position: relative;
+  font-family: Jost;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+b {
+    font-weight: bold;
+}
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 .container {
     margin: 0 auto;
     max-width: 1160px;
+}
+
+.container-wide {
+    margin: 0 auto;
+    max-width: 1720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -12,12 +56,4 @@
     font-weight: 600;
 }
 
-.scroller {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-padding-top: 107px;
-    scroll-snap-type: y mandatory;
-    section {
-        scroll-snap-align: start;
-    }
-}
+
