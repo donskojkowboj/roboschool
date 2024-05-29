@@ -1,13 +1,10 @@
 @import './variables.scss';
 
 .package {
-    padding: 120px 0;
 
     &__title {
         color: $dark-color;
         font-size: 50px;
-        font-style: normal;
-        font-weight: 600;
         }
 
     &__cards {
@@ -53,20 +50,9 @@
                 margin-top: 20px;
                 text-align: center;
                 font-size: 18px;
-                font-weight: 400;
             }
-            &-link {
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                width: 280px;
-                height: 79px;
+            &-button {
                 color: $white-color;
-                background: $red-color;
-                padding: 25px 54px;
-                font-size: 18px;
-                font-weight: 400;
-                border-radius: 5px;
             }
         }
     }

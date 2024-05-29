@@ -2,11 +2,9 @@
 
 .benefits {
     background: #F9F9F9;
-    padding: 100px 0;
+    color: $dark-color;
     &__title {
-        color: $dark-color;
         font-size: 50px;
-        font-weight: 600;
     }
     &__list {
         margin-top: 60px;
@@ -15,16 +13,13 @@
         justify-content: space-between;
         &-item {
             &-title {
-                color: $dark-color;
                 font-size: 24px;
-                font-weight: 600;
             }
             &-descr {
                 padding-right: 10px;
                 margin-top: 20px;
                 color: rgba(20, 16, 36, 0.70);
                 font-size: 18px;
-                font-weight: 400;
                 line-height: 25px;
             }
         }

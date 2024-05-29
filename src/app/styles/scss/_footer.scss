@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './variables';
 
 .footer {
     background: $dark-color;   
@@ -15,6 +15,5 @@
         display: block;
         color: rgba(255, 255, 255, 0.70);
         font-size: 16px;
-        font-weight: 400;
     }
 }

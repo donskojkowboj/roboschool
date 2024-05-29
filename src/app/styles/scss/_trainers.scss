@@ -1,9 +1,6 @@
 .trainers {
-    padding-top: 120px;
-
     &__title {
         font-size: 50px;
-        font-weight: 600;
     }
     &__list {
         margin-top: 60px;
@@ -22,14 +19,11 @@
                 margin-top: 10px;
                 color: rgba(20, 16, 36, 0.70);
                 font-size: 18px;
-                font-weight: 400;
             }
             &-more {
                 margin-top: 20px;
                 color: $red-color;
                 font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
             }
         }
     }

@@ -1,3 +1,5 @@
+@import './variables';
+
 *,
 *:before,
 *:after {
@@ -10,28 +12,41 @@ html {
   scroll-behavior: smooth;
   position: relative;
   font-family: Jost;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
+    display: block;
     text-decoration: none;
     color: inherit;
 }
 
-b {
-    font-weight: bold;
+h1, h2, h3 {
+    font-weight: 600;
 }
+
 button {
     border: none;
     background: none;
     padding: 0;
     margin: 0;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+
+section {
+    padding: 120px 0;
+    &.trainers {
+        padding-bottom: 0;
+    }
+    &.benefits {
+        padding: 100px 0;
+    }
+    &.course {
+        padding: 87px 0;
+    }
+}
   
 .container {
     margin: 0 auto;
@@ -56,4 +71,24 @@ button {
     font-weight: 600;
 }
 
+.button {
+    display: inline-flex;
+    padding: 25px 54px;
+    justify-content: center;
+    align-items: center;
+    font: inherit;
+    color: inherit;  
+    border-radius: 5px;
+    background: #D52027;    
+    &:hover {
+        background: #A11A1F;;
+        transform: scale(1.01);
+    }
+}
 
+.button-dark {
+    background: $dark-color;
+    &:hover {
+        background: #0F0D1A;
+    }
+}

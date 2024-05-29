@@ -3,35 +3,26 @@
     position: relative;
     background: $dark-color;  
     height: calc(100vh - 107px);
+    padding: 0;
     &__content {
         color: $white-color;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 50px;
         height: calc(100vh - 107px);
         width: 50%;
         z-index: 900;
         &_title {
             font-size: 70px;
-            font-weight: 600;
         }
         &_subtitle {
             font-size: 20px;
-            font-weight: 400;
             line-height: 32px;
             padding-right: 66px;
         }
-        &_link {
-            margin-top: 30px;
-            width: 260px;
-            height: 79px;
-            border-radius: 5px;
-            display: inline-flex;
-            background: $red-color;
-            padding: 25px 54px;
-            justify-content: center;
-            align-items: center;
+        &_button {
+            align-self: flex-start;
         }
         &_picture {
             position: absolute;
