@@ -9,18 +9,15 @@
         }
     }
     &__list {
-        padding-top: 60px;
+        margin-top: 60px;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+        gap: 40px;
         &_item {
             &-number {
                 color: $red-color;
                 font-size: 70px;
                 font-weight: 600;
-            }
-            &-descr {
-                padding-right: 40px;
             }
         }
     }

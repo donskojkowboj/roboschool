@@ -1,14 +1,19 @@
 @import './variables.scss';
 
 .course {
-    background: $red-color url('../shared/img/percent.svg') repeat-x bottom -19px right 100px;
+    padding: 87px 0;
+    background-color: $red-color;
+    background-image: url('../shared/img/percent.svg');
+    background-repeat: repeat-x;
+    background-position: bottom -19px right 100px;
+
     &__descr {
         font-size: 20px;
     }
     &__container {
         display: flex;
         color: $white-color;
-        justify-content: space-around;
+        justify-content: space-evenly;
         &-text {
             margin-top: 19px;
             width: 50%;
@@ -25,21 +30,22 @@
         &-form {
             display: flex;
             flex-direction: column;
+            width: 500px;
             gap: 10px;
         }
         &-input {
-            width: 500px;
-            height: 64px;
+            width: 100%;
+            max-width: 500px;
             border-radius: 5px;
             border: none;
             background: $white-color;
-            padding-left: 20px;
-            padding-top: 4px;
-            color: rgba(40, 41, 68, 0.70);
+            padding: 19px 181px 19px 20px;
+            color: #282944b3;
             font-size: 18px;
         }
         &-button {
             font-size: 18px;
+            line-height: 1;
 
         }
     }

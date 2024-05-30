@@ -2,25 +2,23 @@
 
 .benefits {
     background: #F9F9F9;
-    color: $dark-color;
+    padding: 100px 0;
     &__title {
         font-size: 50px;
     }
     &__list {
         margin-top: 60px;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+        gap: 40px;
         &-item {
             &-title {
                 font-size: 24px;
             }
             &-descr {
-                padding-right: 10px;
                 margin-top: 20px;
-                color: rgba(20, 16, 36, 0.70);
+                color: #141024b3;
                 font-size: 18px;
-                line-height: 25px;
             }
         }
     }

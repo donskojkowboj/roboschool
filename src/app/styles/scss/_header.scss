@@ -12,10 +12,8 @@
     
     .menu {
         display: flex;
-        flex-direction: row;
         &__list {
             display: flex;
-            flex-direction: row;
             gap: 40px;
             &_item {
                 font-size: 20px;

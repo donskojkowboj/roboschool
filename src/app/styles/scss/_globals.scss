@@ -12,7 +12,9 @@ html {
   scroll-behavior: smooth;
   position: relative;
   font-family: Jost;
+  color: $dark-color;
   font-weight: 400;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,20 +39,12 @@ button {
 
 section {
     padding: 120px 0;
-    &.trainers {
-        padding-bottom: 0;
-    }
-    &.benefits {
-        padding: 100px 0;
-    }
-    &.course {
-        padding: 87px 0;
-    }
 }
   
 .container {
     margin: 0 auto;
     max-width: 1160px;
+    height: 100%;
 }
 
 .container-wide {
@@ -65,6 +59,7 @@ section {
 .logo {
     font-size: 30px;
     font-weight: 700;
+    line-height: 1;
 }
 .phone {
     font-size: 30px;
@@ -79,16 +74,17 @@ section {
     font: inherit;
     color: inherit;  
     border-radius: 5px;
-    background: #D52027;    
+    background: #D52027;
+    transition: all 0.3s; 
     &:hover {
-        background: #A11A1F;;
+        background: #A11A1F;
         transform: scale(1.01);
     }
-}
-
-.button-dark {
-    background: $dark-color;
-    &:hover {
-        background: #0F0D1A;
+    &.button-dark {
+        background: $dark-color;
+        padding: 23px 54px;
+        &:hover {
+            background: #0F0D1A;
+        }
     }
 }

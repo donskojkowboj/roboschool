@@ -3,17 +3,16 @@
 .footer {
     background: $dark-color;   
     color: $white-color;
-    height: 159px;
+    padding: 40px 0;
     display: flex;
     justify-content: space-between;
     &__schoolname {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
     &__copyright {
-        margin-top: 10px;
-        display: block;
-        color: rgba(255, 255, 255, 0.70);
+        color: #ffffffb3;        ;
         font-size: 16px;
     }
 }
