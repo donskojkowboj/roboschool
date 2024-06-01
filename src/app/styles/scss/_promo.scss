@@ -4,6 +4,7 @@
     background: $dark-color;  
     height: calc(100vh - 107px);
     padding: 0;
+    overflow: hidden;
     &__content {
         color: $white-color;
         display: flex;
@@ -25,16 +26,10 @@
         }
         &_picture {
             width: 783px;
-            // height: auto;
+            height: auto;
             position: absolute;
             left: 48%;
             top: 55px;
         }
     }
-  
 }
-    
-
-
-
-

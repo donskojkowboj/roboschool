@@ -1,16 +1,13 @@
 @import './variables.scss';
 
 .package {
-
     &__title {
         font-size: 50px;
-        }
-
+    }
     &__cards {
         margin-top: 60px;
         display: flex;
         justify-content: space-between;
-
         &_item {
             padding: 40px;
             display: flex;
@@ -28,16 +25,24 @@
                 transform: scale(1.05);
             }
             &-title {
-                display: flex;
-                justify-content: center;
+                position: relative;
+                text-align: center;
                 font-size: 30px;
                 font-weight: 600;
                 text-transform: uppercase;
                 &::before, &::after {
-                    content: " – ";
-                    line-height: 1.4;
-                    padding: 0 13px;
-                  }
+                    position: absolute;
+                    content: "–";
+                    top: 50%; 
+                    transform: translateY(-50%);    
+                }
+                &::before {
+                    left: 23%;
+                }
+                &::after {
+                    right: 23%;
+                }
+                
             }
             &-price {
                 margin-top: 63px;

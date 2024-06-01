@@ -6,7 +6,6 @@
     background-image: url('../shared/img/percent.svg');
     background-repeat: repeat-x;
     background-position: bottom -19px right 100px;
-
     &__descr {
         font-size: 20px;
     }
@@ -21,7 +20,6 @@
         &-title {
             font-size: 36px;
             padding-right: 200px;
-            
         }
         &-descr {
             margin-top: 20px;
@@ -39,14 +37,14 @@
             border-radius: 5px;
             border: none;
             background: $white-color;
-            padding: 19px 181px 19px 20px;
+            padding: 19px 20px;
             color: #282944b3;
             font-size: 18px;
         }
         &-button {
+            padding: 23.25px 54px;
             font-size: 18px;
             line-height: 1;
-
         }
     }
 }
