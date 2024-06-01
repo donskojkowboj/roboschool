@@ -1,0 +1,35 @@
+@import './variables.scss';
+.promo {
+    position: relative;
+    background: $dark-color;  
+    height: calc(100vh - 107px);
+    padding: 0;
+    overflow: hidden;
+    &__content {
+        color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        height: 100%;
+        width: 50%;
+        &_title {
+            font-size: 70px;
+            line-height: 1;
+        }
+        &_subtitle {
+            font-size: 20px;
+            padding-right: 66px;
+        }
+        &_button {
+            align-self: flex-start;
+        }
+        &_picture {
+            width: 783px;
+            height: auto;
+            position: absolute;
+            left: 48%;
+            top: 55px;
+        }
+    }
+}

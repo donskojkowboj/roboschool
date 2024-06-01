@@ -1,0 +1,47 @@
+.trainers {
+    padding-bottom: 0;
+    &__title {
+        font-size: 50px;
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        &_item {
+            font-size: 18px;
+            &-name {
+                margin-top: 20px;
+                font-weight: 600;
+            }
+            &-descr {
+                margin-top: 10px;
+                color: #141024b3;
+            }
+            &-more {
+                margin-top: 20px;
+                color: $red-color;
+            }
+        }
+    }
+    &__buttons {
+        margin-top: 77px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_scrollbar {
+            width: 360px;
+            height: 5px;
+            border-radius: 40px;
+            background: #14102414;
+            &_scroll {
+                width: 260px;
+                height: 5px;
+                border-radius: 40px;
+                background: $dark-color;
+            }
+        }
+    }
+}

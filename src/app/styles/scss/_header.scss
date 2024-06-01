@@ -1,0 +1,23 @@
+@import './variables';
+
+
+.header {
+    background: $dark-color; 
+    top: 0;
+    height: 107px;
+    position: sticky;   
+    display: flex;
+    z-index: 1000;
+    color: $white-color;
+    
+    .menu {
+        display: flex;
+        &__list {
+            display: flex;
+            gap: 40px;
+            &_item {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import './variables';
+
+.footer {
+    background: $dark-color;   
+    color: $white-color;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    &__schoolname {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__copyright {
+        color: #ffffffb3;
+        font-size: 16px;
+    }
+}

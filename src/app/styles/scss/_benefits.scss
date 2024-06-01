@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.benefits {
+    background: #F9F9F9;
+    padding: 100px 0;
+    &__title {
+        font-size: 50px;
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        &-item {
+            &-title {
+                font-size: 24px;
+            }
+            &-descr {
+                margin-top: 20px;
+                color: #141024b3;
+                font-size: 18px;
+            }
+        }
+    }
+}

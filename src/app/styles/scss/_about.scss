@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+.about {
+    &__title {
+        padding-right: 269px;
+        font-size: 30px;
+        &_span {
+            font-weight: 400;
+        }
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        &_item {
+            &-number {
+                color: $red-color;
+                font-size: 70px;
+                font-weight: 600;
+            }
+        }
+    }
+}
