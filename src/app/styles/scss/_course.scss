@@ -6,9 +6,6 @@
     background-image: url('../shared/img/percent.svg');
     background-repeat: repeat-x;
     background-position: bottom -19px right 100px;
-    &__descr {
-        font-size: 20px;
-    }
     &__container {
         display: flex;
         color: $white-color;

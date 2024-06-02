@@ -64,16 +64,22 @@ section {
 .phone {
     font-size: 30px;
     font-weight: 600;
+    &_mobile {
+        display: none;
+    }
 }
-
+.burger__menu {
+    display: none;
+}
 .button {
-    display: inline-flex;
+    display: flex;
     padding: 25px 54px;
     justify-content: center;
     align-items: center;
     font: inherit;
     color: inherit;  
     border-radius: 5px;
+    font-size: 18px;
     background: #D52027;
     transition: all 0.3s; 
     &:hover {
