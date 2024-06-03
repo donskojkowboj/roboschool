@@ -45,3 +45,115 @@
         }
     }
 }
+
+@media (max-width: 1440px) {
+    .trainers {
+        &__title {
+            font-size: 37px;
+        }
+        &__list {
+            margin-top: 45px;
+            &_item {
+                font-size: 14px;
+                &-name {
+                    margin-top: 15px;
+                }
+                &-descr {
+                    margin-top: 8px;
+                }
+                &-more {
+                    margin-top: 15px;
+                }
+                img {
+                    width: 270px;
+                }
+            }
+        }
+        &__buttons {
+            margin-top: 58px;
+            &_scrollbar {
+                width: 270px;
+                height: 4px;
+                border-radius: 30px;
+                &_scroll {
+                    width: 195px;
+                    height: 4px;
+                    border-radius: 30px;
+                }
+            }
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .trainers {
+        &__title {
+            font-size: 30px;
+            text-align: left;
+        }
+        &__list {
+            margin-top: 37px;
+            gap: 20px;
+            &_item {
+                font-size: 13px;
+                &-name {
+                    margin-top: 20px;
+                    font-size: 20px;
+                }
+                &-descr {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 1;
+                }
+                &-more {
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+                img {
+                    width: 237px;
+                }
+            }
+        }
+        &__buttons {
+            margin-top: 50px;
+            &_scrollbar {
+                width: 300px;
+                height: 5px;
+                border-radius: 27px;
+                &_scroll {
+                    width: 150px;
+                    height: 5px;
+                    border-radius: 40px;
+                }
+            }
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .trainers {
+        &__title {
+            text-align: center;
+        }
+        &__list {
+            &_item {
+                img {
+                    width: 220px;
+                }
+            }
+        }
+        &__buttons {
+            margin-top: 40px;
+            &_scrollbar {
+                width: 100%;
+            }
+        }
+    }
+}

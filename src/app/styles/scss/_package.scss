@@ -62,3 +62,104 @@
         }
     }
 }
+
+
+@media (max-width: 1440px) {
+    .package {
+        &__title {
+            font-size: 38px;
+        }
+        &__cards {
+            margin-top: 45px;
+            &_item {
+                padding: 30px;
+                width: 270px;
+                border-radius: 15px;
+                &-title {
+                    font-size: 23px;
+                }
+                &-price {
+                    margin-top: 47px;
+                    font-size: 38px;
+                }
+                &-descr {
+                    margin-top: 15px;
+                    font-size: 14px;
+                }
+                &-button {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .package {
+        &__title {
+            font-size: 30px;
+            text-align: left;
+        }
+        &__cards {
+            margin-top: 40px;
+            gap: 20px;
+            overflow: hidden;
+            &_item {
+                width: 300px;
+                padding: 30px 15px;
+                border-radius: 13px;
+                &-title {
+                    font-size: 20px;
+                }
+                &-price {
+                    margin-top: 42px;
+                    font-size: 35px;
+                }
+                &-descr {
+                    margin-top: 13px;
+                    font-size: 14px;
+                }
+                &-button {
+                    margin-top: 40px;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .package {
+        &__title {
+            text-align: center;
+        }
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            &_item {
+                padding: 40px 20px;
+                &-title {
+                    font-size: 30px;
+                }
+                &-price {
+                    font-size: 50px;
+                }
+                &-descr {
+                    font-size: 16px;
+                }
+                &-button {
+                    margin-top: 40px;
+                    padding: 25px 54px;
+                }
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+    }
+}
