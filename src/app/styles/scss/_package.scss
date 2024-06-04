@@ -19,30 +19,30 @@
             transition: background-color 0.4s ease-in-out,
                         color 0.4s ease-in-out,
                         transform 0.4s ease-in-out;
-            &:hover {
-                background-color: $dark-color;
-                color: $white-color;
-                transform: scale(1.05);
-            }
             &-title {
                 position: relative;
                 text-align: center;
                 font-size: 30px;
                 font-weight: 600;
                 text-transform: uppercase;
+                align-self: center;
+                line-height: 1;
                 &::before, &::after {
                     position: absolute;
-                    content: "–";
+                    content: "";
+                    width: 19px;
+                    height: 3px;
+                    background-color: #141024;
                     top: 50%; 
-                    transform: translateY(-50%);    
+                    transform: translateY(-50%);   
+                    transition: all 0.4s ease-in-out;
                 }
                 &::before {
-                    left: 23%;
+                    left: -33px;
                 }
                 &::after {
-                    right: 23%;
+                    right: -33px;
                 }
-                
             }
             &-price {
                 margin-top: 63px;
@@ -59,10 +59,18 @@
                 margin-top: 61px;
                 color: $white-color;
             }
+            &:hover {
+                background-color: $dark-color;
+                color: $white-color;
+                transform: scale(1.05);
+                .package__cards_item-title:before,
+                .package__cards_item-title:after {
+                    background-color: #fff;
+                }
+            }
         }
     }
 }
-
 
 @media (max-width: 1440px) {
     .package {
@@ -103,7 +111,6 @@
         &__cards {
             margin-top: 40px;
             gap: 20px;
-            overflow: hidden;
             &_item {
                 width: 300px;
                 padding: 30px 15px;
@@ -128,6 +135,15 @@
                     transform: scale(1);
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .package {
+        &__cards {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

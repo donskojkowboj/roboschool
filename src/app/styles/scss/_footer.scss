@@ -4,8 +4,10 @@
     background: $dark-color;   
     color: $white-color;
     padding: 40px 0;
-    display: flex;
-    justify-content: space-between;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
     &__schoolname {
         display: flex;
         flex-direction: column;
@@ -45,6 +47,7 @@
             font-size: 24px;
         }
         .phone {
+            display: block;
             font-size: 20px;
         }
     }
@@ -52,16 +55,14 @@
 
 @media (max-width: 425px) {
     .footer {
-        .container-wide {
-           justify-content: center;
+        &__content {
+            justify-content: center;
         }
         .phone {
             display: none;
-        }
-        .phone_mobile {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
+            &_mobile {
+                display: block;
+            }
         }
         &__schoolname {
             text-align: center;

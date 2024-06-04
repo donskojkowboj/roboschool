@@ -50,9 +50,6 @@ section {
 .container-wide {
     margin: 0 auto;
     max-width: 1720px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -65,8 +62,22 @@ section {
     font-size: 30px;
     font-weight: 600;
     &_mobile {
+        font-size: 16px;
+        font-weight: 600;
         display: none;
     }
+    &__icon {
+        line-height: 0;
+        padding: 20px;
+        border: 1px solid transparent;
+        background: linear-gradient(#1B172B, #1B172B) padding-box,
+                    linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-size: 100%;
+        background-image: url('/src/shared/img/promo/phone.svg');
+    }           
+    
 }
 .burger__menu {
     display: none;
@@ -94,13 +105,15 @@ section {
     }
 }
 
+@media (max-width: 1800px) {
+    .container-wide {
+        padding: 0 40px;
+    }
+}
 
 @media (max-width: 1440px) {
     .container {
         max-width: 900px;
-    }
-    .container-wide {
-        max-width: 1300px;
     }
     .logo {
         font-size: 25px;
@@ -118,13 +131,10 @@ section {
 } 
 
 @media (max-width: 1200px) {
-    .container {
-        width: 100%;
-        padding: 0 20px;    
-    }
+    .container, 
     .container-wide {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 20px;    
     }
 }
 
@@ -139,14 +149,24 @@ section {
     section {
         padding: 80px 0;
     }
+    .phone {
+        display: none;   
+    }
 }
 
 @media (max-width: 425px) {
-    .container, .container-wide {
+    .container, 
+    .container-wide {
         padding: 0 10px;
     }
     .logo {
         font-size: 18px;
+    }
+    .phone {
+        display: none;
+        &_mobile {
+            display: block;
+        }
     }
     .button {
         width: 100%;

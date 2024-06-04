@@ -3,14 +3,16 @@
 .header {
     background: $dark-color; 
     top: 0;
-    height: 107px;
+    padding: 30px 0;
     position: sticky;   
-    display: flex;
     z-index: 1000;
-    color: $white-color;
-    
-    .menu {
+    &__content {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white-color;
+    }
+    .menu {
         &__list {
             display: flex;
             gap: 40px;
@@ -23,7 +25,7 @@
 
 @media (max-width: 1440px) {
     .header {
-        height: 85px;
+        padding: 25px 0;
         .menu__list_item {
             font-size: 16px;
         }
@@ -32,21 +34,7 @@
 
 @media (max-width: 768px) {
     .header {
-        height: 80px;
-        .phone {
-            display: none;
-            &__icon {
-                line-height: 0;
-                padding: 10px;
-                border: 1px solid transparent;
-                background: linear-gradient(#1B172B, #1B172B) padding-box,
-                            linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
-                border-radius: 10px;
-                svg {
-                    padding: 2px;
-                }
-            }           
-        }
+        padding: 20px 0;
         .menu {
             &__list {
                 visibility: hidden;
@@ -73,64 +61,19 @@
             gap: 16px;
         }
         .hamburger-button {
-            position: relative;
+            z-index: 900;
             line-height: 0;
             padding: 20px;
             border: 1px solid transparent;
             background: linear-gradient(#1B172B, #1B172B) padding-box,
                         linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
             border-radius: 10px;
-            span {
-                top: 15px;
-                content: '';
-                position: absolute;
-                border-radius: 10px;
-                width: 26px;
-                height: 2px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: $white-color;
-                transition: all 0.6s;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    border-radius: 10px;
-                    top: 5px;
-                    width: 26px;
-                    height: 2px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-color: $white-color;
-                }
-                &::after {
-                    content: '';
-                    position: absolute;
-                    border-radius: 10px;
-                    top: 10px;
-                    width: 13px;
-                    height: 2px;
-                    left: 0%;
-                    background-color: $white-color;
-                    transition: all 0.5s;
-                }
-            }
+            background-image: url('/src/shared/img/promo/burger.svg');
+            background-size: 100%;
             &_active {
-                span {
-                    width: 14px;
-                    height: 2px;
-                    transform: rotate(45deg);
-                    top: 19px;
-                    left: 13.5px;
-                    &::after {                    
-                        width: 14px;
-                        height: 2px;
-                        top: 10%;
-                        transform: rotate(-90deg);
-                    }
-                    &::before {
-                        display: none;
-                    }
-                }
+                line-height: 0;
+                padding: 20px;
+                background-image: url('/src/shared/img/promo/close.svg');
             }
         }
     }
@@ -138,6 +81,6 @@
 
 @media (max-width: 425px) {
     .header {
-        height: 64px;
+        padding: 10px 0;
     }
 }
