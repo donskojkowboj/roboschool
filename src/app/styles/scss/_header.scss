@@ -21,6 +21,36 @@
             }
         }
     }
+    .burger__menu {
+        display: none;
+        gap: 16px;
+        .phone {
+            &__icon {
+                align-self: center;
+                line-height: 0;
+                padding: 11px;
+                border: 1px solid transparent;
+                background: linear-gradient(#1B172B, #1B172B) padding-box,
+                            linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+                border-radius: 10px;
+            }           
+        }
+    }
+    .hamburger-button {
+        align-self: center;
+        line-height: 0;
+        z-index: 900;
+        border: 1px solid transparent;
+        background: linear-gradient(#1B172B, #1B172B) padding-box,
+                    linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+        border-radius: 10px;
+        .button_burger {
+            display: block;
+        }
+        .button_close {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 1440px) {
@@ -41,7 +71,7 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                min-height: 100vh;
+                min-height: 100dvh;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -59,22 +89,6 @@
         .burger__menu {
             display: flex;
             gap: 16px;
-        }
-        .hamburger-button {
-            z-index: 900;
-            line-height: 0;
-            padding: 20px;
-            border: 1px solid transparent;
-            background: linear-gradient(#1B172B, #1B172B) padding-box,
-                        linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
-            border-radius: 10px;
-            background-image: url('/src/shared/img/promo/burger.svg');
-            background-size: 100%;
-            &_active {
-                line-height: 0;
-                padding: 20px;
-                background-image: url('/src/shared/img/promo/close.svg');
-            }
         }
     }
 }

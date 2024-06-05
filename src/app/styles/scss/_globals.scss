@@ -61,26 +61,6 @@ section {
 .phone {
     font-size: 30px;
     font-weight: 600;
-    &_mobile {
-        font-size: 16px;
-        font-weight: 600;
-        display: none;
-    }
-    &__icon {
-        line-height: 0;
-        padding: 20px;
-        border: 1px solid transparent;
-        background: linear-gradient(#1B172B, #1B172B) padding-box,
-                    linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
-        border-radius: 10px;
-        border: 1px solid transparent;
-        background-size: 100%;
-        background-image: url('/src/shared/img/promo/phone.svg');
-    }           
-    
-}
-.burger__menu {
-    display: none;
 }
 .button {
     display: flex;
