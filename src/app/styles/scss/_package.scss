@@ -7,7 +7,8 @@
     &__cards {
         margin-top: 60px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        gap: 10px;
         &_item {
             padding: 40px;
             display: flex;
@@ -56,6 +57,8 @@
                 font-size: 18px;
             }
             &-button {
+                padding: 20px 40px;
+                font-size: 14px;
                 margin-top: 61px;
                 color: $white-color;
             }
