@@ -2,7 +2,8 @@
 .promo {
     position: relative;
     background: $dark-color;  
-    height: calc(100vh - 107px);
+    height: calc(100vh - 108px);
+    max-height: 972px;
     padding: 0;
     overflow: hidden;
     &__content {
@@ -41,7 +42,6 @@
 
 @media (max-width: 1200px) {
     .promo {
-        max-height: calc(100vw * 2);
         &__content {
             &_title {
                 font-size: 60px;
@@ -52,7 +52,9 @@
 
 @media (max-width: 1024px) {
     .promo {
-        max-height: calc(100vw * 1.9);
+        height: calc(100vw * 1.2);
+        max-height: calc(100dvh - 84px);
+        min-height: 70dvh;
         &__content {
             padding-bottom: 50px;
             width: 100%;
@@ -67,13 +69,11 @@
             }
             &_subtitle {
                 align-self: center;
-                z-index: 100;
                 width: 70%;
                 padding: 0 50px;
             }
             &_picture {
-                width: 500px;
-                z-index: 0;
+                width: 450px;
                 top: initial;
                 left: 50%;
                 transform: translateX(-50%);
@@ -89,12 +89,9 @@
 
 @media (max-width: 768px) {
     .promo {
-        max-height: calc(100vw * 1.6);
         &__content {
             &_title {
                 font-size: 50px;
-                line-height: 1.6;
-                z-index: 100;
             }
             &_subtitle {
                 width: initial;
@@ -102,7 +99,7 @@
                 padding: 0 30px;
             }
             &_picture {
-                width: 400px;
+                width: 390px;
             }
         }
     }
@@ -110,7 +107,9 @@
 
 @media (max-width: 425px) {
     .promo {
-        max-height: calc(100vw * 1.9);
+        height: 550px;
+        min-width: unset;
+        max-height: unset;
         &__content {
             padding: 40px 0;
             &_title {
@@ -126,3 +125,4 @@
         }
     }
 }
+

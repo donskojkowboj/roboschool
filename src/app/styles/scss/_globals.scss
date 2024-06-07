@@ -9,6 +9,7 @@
 
 body,
 html {
+  min-width: 320px;
   scroll-behavior: smooth;
   position: relative;
   font-family: Jost;
@@ -71,6 +72,7 @@ section {
     color: inherit;  
     border-radius: 5px;
     font-size: 18px;
+    line-height: 1;
     background: #D52027;
     transition: all 0.3s; 
     &:hover {
@@ -92,15 +94,6 @@ section {
 }
 
 @media (max-width: 1440px) {
-    .container {
-        padding: 0;
-    }
-    .logo {
-        font-size: 25px;
-    }
-    .phone {
-        font-size: 25px;
-    }
     section {
         padding: 90px 0;
     }
@@ -114,13 +107,13 @@ section {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .phone {
-        display: none;   
+        font-size: 16px;
     }
     .button {
-        padding: 25px 54px;
-        font-size: 18px;
+        padding: 22px 54px;
+        font-size: 16px;
     }
 }
 
@@ -140,12 +133,6 @@ section {
     }
     .logo {
         font-size: 18px;
-    }
-    .phone {
-        display: none;
-        &_mobile {
-            display: block;
-        }
     }
     .button {
         width: 100%;
