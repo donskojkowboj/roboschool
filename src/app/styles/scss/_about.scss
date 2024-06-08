@@ -11,9 +11,11 @@
     &__list {
         margin-top: 60px;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 40px;
         &_item {
+            flex-basis: 260px;
             &-number {
                 color: $red-color;
                 font-size: 70px;
@@ -29,68 +31,45 @@
 @media (max-width: 1440px) {
     .about {
         &__title {
-            font-size: 22px;
             padding-right: 0;
-            width: 65%;
-        }
-        &__list {
-            margin-top: 45px;
-            gap: 30px;
-            &_item {
-                &-number {
-                    font-size: 52px;
-                }
-                &-descr {
-                    font-size: 14px;
-                }
-            }
         }
     }
 }
+
 @media (max-width: 1024px) {
     .about {
+        &__title {
+            font-size: 20px;
+        }
         &__list {
+            margin-top: 30px;
+            gap: 20px;
             &_item {
                 &-number {
-                    font-size: 49px;
+                    font-size: 60px;
                 }
-            }
-        }
-    }
-}
-@media (max-width: 768px) {
-    .about {
-        &__title {
-            width: initial;
-        }
-        &__list {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            &_item {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
                 &-descr {
                     font-size: 16px;
-                    padding: 0 20px;
                 }
             }
         }
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .about {
         &__list {
-            display: flex;
             flex-direction: column;
-        }
-        &_item {
-            &-number {
-                font-size: 60px;
+            &_item {
+                flex-basis: unset;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &-descr {
+                    text-align: center;
+                }
             }
         }
+     
     }
 }

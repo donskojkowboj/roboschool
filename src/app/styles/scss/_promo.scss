@@ -71,6 +71,7 @@
                 align-self: center;
                 width: 70%;
                 padding: 0 50px;
+                z-index: 100;
             }
             &_picture {
                 width: 450px;
@@ -95,7 +96,6 @@
             }
             &_subtitle {
                 width: initial;
-                z-index: 100;
                 padding: 0 30px;
             }
             &_picture {

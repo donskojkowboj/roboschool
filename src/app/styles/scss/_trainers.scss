@@ -46,50 +46,8 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .trainers {
-        &__title {
-            font-size: 37px;
-        }
-        &__list {
-            margin-top: 45px;
-            &_item {
-                font-size: 14px;
-                &-name {
-                    margin-top: 15px;
-                }
-                &-descr {
-                    margin-top: 8px;
-                }
-                &-more {
-                    margin-top: 15px;
-                }
-                img {
-                    width: 270px;
-                }
-            }
-        }
-        &__buttons {
-            margin-top: 58px;
-            &_scrollbar {
-                width: 270px;
-                height: 4px;
-                border-radius: 30px;
-                &_scroll {
-                    width: 195px;
-                    height: 4px;
-                    border-radius: 30px;
-                }
-            }
-            svg {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .trainers {
         &__title {
             font-size: 30px;

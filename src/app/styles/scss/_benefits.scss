@@ -9,9 +9,11 @@
     &__list {
         margin-top: 60px;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 40px;
         &-item {
+            flex-basis: 360px;
             &-title {
                 font-size: 24px;
             }
@@ -24,45 +26,18 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .benefits {
-        padding: 75px 0;
-        &__title {
-            font-size: 37px;
-        }
-        &__list {
-            margin-top: 33px;
-            gap: 30px;
-            &-item {
-                &-title {
-                    font-size: 18px;
-                }
-                &-descr {
-                    margin-top: 15px;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .benefits {
         padding: 40px 0 52px 0;
         &__title {
             font-size: 30px;
+            text-align: left;
         }
         &__list {
             margin-top: 40px;
             gap: 30px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
             &-item {
-                text-align: left;
-                &:nth-child(3) {
-                    grid-column-start: 1;
-                    grid-column-end: 3;
-                }
+                flex-basis: 300px;
                 &-title {
                     font-size: 20px;
                 }
@@ -74,18 +49,20 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .benefits {
+        &__list {
+            &-item {
+                text-align: center;
+            }
+        }
+    }
+}
 
 @media (max-width: 425px) {
     .benefits {
         &__title {
             text-align: center;
-        }
-        &__list {
-            display: flex;
-            flex-direction: column;
-            &-item {
-                text-align: center;
-            }
         }
     }
 }

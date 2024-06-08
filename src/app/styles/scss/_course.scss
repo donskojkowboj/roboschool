@@ -25,12 +25,12 @@
         &-form {
             display: flex;
             flex-direction: column;
-            width: 500px;
             gap: 10px;
+            max-width: 500px;
+            width: 100%;
+            min-width: 300px;
         }
         &-input {
-            width: 100%;
-            max-width: 500px;
             border-radius: 5px;
             border: none;
             background: $white-color;
@@ -46,46 +46,8 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .course {
-        padding: 65px 0;
-        background-position: bottom -30px right 100px;
-        &__container {
-            display: flex;
-            color: $white-color;
-            justify-content: space-evenly;
-            &-text {
-                margin-top: 14px;
-                width: 50%;
-            }
-            &-title {
-                font-size: 27px;
-                padding-right: 190px;
-                line-height: 1.3;
-            }
-            &-descr {
-                margin-top: 15px;
-                font-size: 15px;
-            }
-            &-form {
-                width: 375px;
-                gap: 8px;
-            }
-            &-input {
-                max-width: 375px;
-                border-radius: 4px;
-                padding: 14px 15px;
-                font-size: 14px;
-            }
-            &-button {
-                padding: 17px 15px;
-                font-size: 14px;
-            }
-        }
-    }
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .course {
         padding: 40px 0;
         background-image: none;
@@ -94,7 +56,7 @@
             &-text {
                 width: initial;
                 text-align: center;
-                margin-top: 13px;
+                margin-top: 0;
             }
             &-title {
                 font-size: 30px;
@@ -107,28 +69,18 @@
             }
             &-form {
                 margin-top: 40px;
+                padding: 0 10px;
                 align-self: center;
                 gap: 10px;
             }
             &-input {
-                max-width: 100%;
                 border-radius: 4px;
                 padding: 17px 20px;
                 font-size: 18px;
             }
             &-button {
-                padding: 22.25px 54px;
+                padding: 21.25px 54px;
 
-            }
-        }
-    }
-}
-
-@media (max-width: 425px) {
-    .course {
-        &__container {
-            &-form {
-                width: 100%;
             }
         }
     }

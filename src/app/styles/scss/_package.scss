@@ -7,22 +7,23 @@
     &__cards {
         margin-top: 60px;
         display: flex;
-        justify-content: space-evenly;
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
         &_item {
             padding: 40px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: 360px;
+            flex-basis: 360px;
             border-radius: 20px;
+            justify-content: space-between;
+            text-align: center;
             border: 1px solid #14102433;
             transition: background-color 0.4s ease-in-out,
                         color 0.4s ease-in-out,
                         transform 0.4s ease-in-out;
             &-title {
                 position: relative;
-                text-align: center;
                 font-size: 30px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -47,18 +48,15 @@
             }
             &-price {
                 margin-top: 63px;
-                text-align: center;
                 font-size: 50px;
                 font-weight: 600;
             }
             &-descr {
                 margin-top: 20px;
-                text-align: center;
                 font-size: 18px;
             }
             &-button {
-                padding: 20px 40px;
-                font-size: 14px;
+                font-size: 18px;
                 margin-top: 61px;
                 color: $white-color;
             }
@@ -75,37 +73,7 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .package {
-        &__title {
-            font-size: 38px;
-        }
-        &__cards {
-            margin-top: 45px;
-            &_item {
-                padding: 30px;
-                width: 270px;
-                border-radius: 15px;
-                &-title {
-                    font-size: 23px;
-                }
-                &-price {
-                    margin-top: 47px;
-                    font-size: 38px;
-                }
-                &-descr {
-                    margin-top: 15px;
-                    font-size: 14px;
-                }
-                &-button {
-                    margin-top: 48px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .package {
         &__title {
             font-size: 30px;
@@ -113,72 +81,40 @@
         }
         &__cards {
             margin-top: 40px;
-            gap: 20px;
-            &_item {
-                width: 300px;
-                padding: 30px 15px;
-                border-radius: 13px;
-                &-title {
-                    font-size: 20px;
-                }
-                &-price {
-                    margin-top: 42px;
-                    font-size: 35px;
-                }
-                &-descr {
-                    margin-top: 13px;
-                    font-size: 14px;
-                }
-                &-button {
-                    margin-top: 40px;
-                    padding: 10px 20px;
-                    font-size: 14px;
-                }
-                &:hover {
-                    transform: scale(1);
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 650px) {
-    .package {
-        &__cards {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-}
-
-@media (max-width: 425px) {
-    .package {
-        &__title {
-            text-align: center;
-        }
-        &__cards {
-            flex-direction: column;
-            align-items: center;
             gap: 30px;
             &_item {
+                flex-basis: 300px;
                 padding: 40px 20px;
                 &-title {
                     font-size: 30px;
                 }
                 &-price {
+                    margin-top: 42px;
                     font-size: 50px;
                 }
                 &-descr {
+                    margin-top: 20px;
                     font-size: 16px;
                 }
                 &-button {
                     margin-top: 40px;
                     padding: 25px 54px;
+                    font-size: 16px;
                 }
                 &:hover {
                     transform: none;
                 }
             }
+        }
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    .package {
+        &__title {
+            text-align: center;
         }
     }
 }
