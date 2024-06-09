@@ -11,18 +11,35 @@
         overflow-x: scroll;
         scrollbar-width: none;
         &_item {
-            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
             &-name {
-                margin-top: 20px;
+                font-size: 24px;
                 font-weight: 600;
             }
             &-descr {
-                margin-top: 10px;
+                font-size: 18px;
                 color: #141024b3;
             }
             &-more {
-                margin-top: 20px;
+                margin-top: 10px;
                 color: $red-color;
+                align-self: flex-start;
+                font-size: 18px;
+
+            }
+            img {
+                max-height: 500px;
+                width: 360px;
+                height: auto;
+                border-radius: 20px;
             }
         }
     }
@@ -51,28 +68,28 @@
     .trainers {
         &__title {
             font-size: 30px;
-            text-align: left;
+            text-align: center;
         }
         &__list {
             margin-top: 37px;
             gap: 20px;
             &_item {
-                font-size: 13px;
+                &-wrapper {
+                    height: 110px;
+                }
                 &-name {
-                    margin-top: 20px;
                     font-size: 20px;
                 }
                 &-descr {
-                    margin-top: 10px;
                     font-size: 14px;
                     line-height: 1;
                 }
                 &-more {
-                    margin-top: 20px;
                     font-size: 16px;
                 }
                 img {
-                    width: 237px;
+                    width: 220px;
+                    max-height: 306px;
                 }
             }
         }
@@ -97,16 +114,6 @@
 
 @media (max-width: 425px) {
     .trainers {
-        &__title {
-            text-align: center;
-        }
-        &__list {
-            &_item {
-                img {
-                    width: 220px;
-                }
-            }
-        }
         &__buttons {
             margin-top: 40px;
             &_scrollbar {
