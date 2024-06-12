@@ -30,7 +30,6 @@
                 color: #141024b3;
             }
             &-more {
-                margin-top: 10px;
                 color: $red-color;
                 align-self: flex-start;
                 font-size: 18px;
@@ -115,6 +114,10 @@
 
 @media (max-width: 425px) {
     .trainers {
+        &__list {
+            margin-left: -10px;
+            width: calc(100% + 20px);
+        }
         &__buttons {
             margin-top: 40px;
             &_scrollbar {
