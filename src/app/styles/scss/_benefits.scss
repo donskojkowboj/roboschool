@@ -9,9 +9,11 @@
     &__list {
         margin-top: 60px;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 40px;
         &-item {
+            flex-basis: 360px;
             &-title {
                 font-size: 24px;
             }
@@ -19,6 +21,39 @@
                 margin-top: 20px;
                 color: #141024b3;
                 font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .benefits {
+        padding: 50px 0;
+        &__title {
+            text-align: center;
+            font-size: 30px;
+        }
+        &__list {
+            margin-top: 40px;
+            gap: 30px;
+            &-item {
+                flex-basis: 300px;
+                &-title {
+                    font-size: 20px;
+                }
+                &-descr {
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .benefits {
+        &__list {
+            &-item {
+                text-align: center;
             }
         }
     }

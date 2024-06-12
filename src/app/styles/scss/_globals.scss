@@ -9,6 +9,7 @@
 
 body,
 html {
+  min-width: 320px;
   scroll-behavior: smooth;
   position: relative;
   font-family: Jost;
@@ -50,9 +51,6 @@ section {
 .container-wide {
     margin: 0 auto;
     max-width: 1720px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
@@ -65,15 +63,16 @@ section {
     font-size: 30px;
     font-weight: 600;
 }
-
 .button {
-    display: inline-flex;
+    display: flex;
     padding: 25px 54px;
     justify-content: center;
     align-items: center;
     font: inherit;
     color: inherit;  
     border-radius: 5px;
+    font-size: 18px;
+    line-height: 1;
     background: #D52027;
     transition: all 0.3s; 
     &:hover {
@@ -87,3 +86,59 @@ section {
         }
     }
 }
+
+@media (max-width: 1800px) {
+    .container-wide {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1440px) {
+    section {
+        padding: 90px 0;
+    }
+} 
+
+@media (max-width: 1200px) {
+    .container, 
+    .container-wide {
+        width: 100%;
+        padding: 0 20px;    
+    }
+}
+
+@media (max-width: 1024px) {
+    .phone {
+        font-size: 16px;
+    }
+    .button {
+        padding: 22px 54px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 28px;
+    }
+    section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .container, 
+    .container-wide {
+        padding: 0 10px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .button {
+        width: 100%;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
+  

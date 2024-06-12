@@ -6,9 +6,6 @@
     background-image: url('../shared/img/percent.svg');
     background-repeat: repeat-x;
     background-position: bottom -19px right 100px;
-    &__descr {
-        font-size: 20px;
-    }
     &__container {
         display: flex;
         color: $white-color;
@@ -28,12 +25,12 @@
         &-form {
             display: flex;
             flex-direction: column;
-            width: 500px;
             gap: 10px;
+            max-width: 500px;
+            width: 100%;
+            min-width: 300px;
         }
         &-input {
-            width: 100%;
-            max-width: 500px;
             border-radius: 5px;
             border: none;
             background: $white-color;
@@ -42,9 +39,49 @@
             font-size: 18px;
         }
         &-button {
-            padding: 23.25px 54px;
+            padding: 23px 54px;
             font-size: 18px;
             line-height: 1;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .course {
+        padding: 40px 0;
+        background-image: none;
+        &__container {
+            flex-direction: column;
+            &-text {
+                width: initial;
+                text-align: center;
+                margin-top: 0;
+            }
+            &-title {
+                font-size: 30px;
+                padding-right: 0px;
+            }
+            &-descr {
+                margin-top: 10px;
+                padding: 0 10px;
+                font-size: 16px;
+            }
+            &-form {
+                margin-top: 40px;
+                padding: 0 10px;
+                align-self: center;
+                gap: 10px;
+            }
+            &-input {
+                border-radius: 4px;
+                padding: 17px 20px;
+                font-size: 18px;
+            }
+            &-button {
+                padding: 22px 54px;
+                font-size: 16px;
+            }
         }
     }
 }
