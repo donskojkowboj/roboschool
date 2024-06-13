@@ -47,9 +47,20 @@
         border-radius: 10px;
         .button_burger {
             display: block;
+            &:active {
+                border: 1px solid transparent;
+                border-radius: 10px;
+                background-color: #0F0D1A;
+                box-shadow: 0 0 10px #0000001A;
+            }
         }
         .button_close {
-            display: none;
+            &:active {
+                border: 1px solid transparent;
+                border-radius: 10px;
+                background-color: #0F0D1A;
+                box-shadow: 0 0 10px #0000001A;
+            }
         }
     }
 }

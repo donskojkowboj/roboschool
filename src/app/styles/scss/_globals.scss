@@ -87,6 +87,14 @@ section {
     }
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+.disabled {
+    display: none;
+}
+
 @media (max-width: 1800px) {
     .container-wide {
         padding: 0 40px;
