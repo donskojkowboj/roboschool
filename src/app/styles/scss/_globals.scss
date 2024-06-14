@@ -95,6 +95,20 @@ section {
     display: none;
 }
 
+.info {
+    z-index: 600;
+    position: absolute;
+    display: inline-block;
+    margin-left: 10px;
+    transform: translateY(-64px);
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 2px 8px 0px #1410241a;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 @media (max-width: 1800px) {
     .container-wide {
         padding: 0 40px;
@@ -131,6 +145,10 @@ section {
     }
     section {
         padding: 80px 0;
+    }
+    .info {
+        margin-left: -150px;
+        font-size: 14px;
     }
 }
 

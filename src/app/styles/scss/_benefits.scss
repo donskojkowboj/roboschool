@@ -17,6 +17,11 @@
             &-title {
                 font-size: 24px;
             }
+            &-tooltip {
+                position: absolute;
+                margin-left: 10px;
+                cursor: pointer;
+            }
             &-descr {
                 margin-top: 20px;
                 color: #141024b3;
