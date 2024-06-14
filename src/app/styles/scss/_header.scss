@@ -20,6 +20,14 @@
             &_item {
                 font-size: 20px;
             }
+            &_button {
+                line-height: 0;
+                z-index: 900;
+                border: 1px solid transparent;
+                background: linear-gradient(#1B172B, #1B172B) padding-box,
+                            linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+                border-radius: 10px;
+            }
         }
     }
     .burger__menu {
@@ -46,10 +54,20 @@
                     linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
         border-radius: 10px;
         .button_burger {
-            display: block;
+            &:active {
+                border: 1px solid transparent;
+                border-radius: 10px;
+                background-color: #0F0D1A;
+                box-shadow: 0 0 10px #0000001A;
+            }
         }
         .button_close {
-            display: none;
+            &:active {
+                border: 1px solid transparent;
+                border-radius: 10px;
+                background-color: #0F0D1A;
+                box-shadow: 0 0 10px #0000001A;
+            }
         }
     }
 }
