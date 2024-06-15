@@ -17,18 +17,20 @@
             &-title {
                 font-size: 24px;
                 .tooltip {
+                    position: absolute;
+                    padding: 10px 10px 0 10px;
+                    transform: translateY(-10px);
                     &:hover {
                         .tooltip-description {
-                            visibility: visible;
+                            display: inline-block;
                         }
                     }
                     &-description {
-                        z-index: 600;
                         position: absolute;
-                        display: inline-block;
-                        visibility: hidden;
-                        margin-left: 10px;
-                        transform: translateY(-64px);
+                        display: none;
+                        width: max-content;
+                        margin-left: -22px;
+                        bottom: 100%;
                         padding: 15px 20px;
                         border-radius: 5px;
                         background: #FFF;
@@ -37,8 +39,6 @@
                         font-weight: 400;
                     }
                     &-icon {
-                        position: absolute;
-                        margin-left: 10px;
                         cursor: pointer;
                         &:hover {
                             svg {
@@ -75,6 +75,7 @@
                 &-descr {
                     margin-top: 10px;
                     font-size: 16px;
+                    right: 0;
                 }
             }
         }
@@ -86,9 +87,11 @@
             &-item {
                 text-align: center;
                 &-title {
-                    .tooltip-description {
-                        margin-left: -150px;
-                        font-size: 14px;
+                    .tooltip {
+                        &-description {
+                            right: -50%;
+                            font-size: 14px;
+                        }
                     }
                 }
             }
