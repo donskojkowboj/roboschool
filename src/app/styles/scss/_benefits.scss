@@ -16,37 +16,6 @@
             flex-basis: 360px;
             &-title {
                 font-size: 24px;
-                .tooltip {
-                    position: absolute;
-                    padding: 10px 10px 0 10px;
-                    transform: translateY(-10px);
-                    &:hover {
-                        .tooltip-description {
-                            display: inline-block;
-                        }
-                    }
-                    &-description {
-                        position: absolute;
-                        display: none;
-                        width: max-content;
-                        margin-left: -22px;
-                        bottom: 100%;
-                        padding: 15px 20px;
-                        border-radius: 5px;
-                        background: #FFF;
-                        box-shadow: 0px 2px 8px 0px #1410241a;
-                        font-size: 16px;
-                        font-weight: 400;
-                    }
-                    &-icon {
-                        cursor: pointer;
-                        &:hover {
-                            svg {
-                                opacity: 0.4;
-                            }
-                        }
-                    }
-                }
             }
             &-descr {
                 margin-top: 20px;
@@ -75,7 +44,6 @@
                 &-descr {
                     margin-top: 10px;
                     font-size: 16px;
-                    right: 0;
                 }
             }
         }
@@ -86,16 +54,7 @@
         &__list {
             &-item {
                 text-align: center;
-                &-title {
-                    .tooltip {
-                        &-description {
-                            right: -50%;
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-            
+            }   
         }
     }
 }
