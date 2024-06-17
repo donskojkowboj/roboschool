@@ -95,6 +95,42 @@ section {
     display: none;
 }
 
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    transform: translateY(-10px);
+    &:hover {
+        .tooltip-description {
+            display: inline-block;
+        }
+    }
+    &-description {
+        position: absolute;
+        display: none;
+        width: max-content;
+        max-width: 255px;
+        bottom: 100%;
+        padding: 15px 20px;
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 2px 8px 0px #1410241a;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            svg {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+
 @media (max-width: 1800px) {
     .container-wide {
         padding: 0 40px;
@@ -123,6 +159,11 @@ section {
         padding: 22px 54px;
         font-size: 16px;
     }
+    .tooltip {
+        &-description {
+            left: -150px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -131,6 +172,11 @@ section {
     }
     section {
         padding: 80px 0;
+    }
+    .tooltip {
+        &-description {
+            font-size: 14px;
+        }
     }
 }
 
