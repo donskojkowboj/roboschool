@@ -12,7 +12,6 @@ function closeModal() {
 function openModal() {
     modal.classList.remove('display-none');
     body.classList.add('no-scroll');
-
 };
 
 document.addEventListener('keydown', (e) => {
