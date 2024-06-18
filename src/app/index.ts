@@ -5,3 +5,4 @@ import './index.scss'
 
 // here you can init react or vue
 import './scripts/burger-menu'
+import './scripts/modal'

@@ -1,0 +1,204 @@
+@import 'variables';
+
+.modal {
+    &__backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background: #1410241a;
+    }
+    &__content {
+        position:fixed;
+        overflow-y: auto;
+        scrollbar-width: none;
+        max-height: 80vh;
+        z-index: 1100;
+        padding: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 940px;
+        border-radius: 20px;
+        margin: 0 auto;
+        background: $white-color;
+        &-close-btn {
+            position: absolute;
+            right: 40px;
+            font-size: 18px;
+            color: #141024b3;
+        }
+    }
+    
+    &__card {
+        display: flex;
+        flex-direction: column;
+        &-content {
+            display: flex;
+            gap: 40px;
+            &-img {
+                width: 160px;
+                height: auto;
+            }
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                &-name {
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+                &-occupation {
+                    color: #141024b3;
+                    font-size: 18px;
+                }
+                &-social {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: left;
+                    align-items: center;
+                    &-icon {
+                        line-height: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__tabs {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        &-item {
+            width: calc(100% / 3);
+            font-size: 20px;
+            &_chosen {
+                color: $red-color;
+            }
+            &_none {
+                color: #14102433;
+            }
+        }
+        &:after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #1410241c;
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &__info {
+        position: relative;
+        &-education {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        &-courses {
+            margin-top: 40px;
+            &-title {
+                font-size: 24px;
+            }
+            &-details {
+                margin-top: 20px;
+                &-lastone {
+                    background: linear-gradient(180deg, #141024 0%, #14102400 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+        &_scrollbar {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            height: 335px;
+            width: 5px;
+            background-color: #14102414;
+            border-radius: 40px;
+            &-draggable {
+                position: absolute;
+                width: 5px;
+                height: 50%;
+                background: $dark-color;
+                border-radius: 40px;
+            }
+        }
+    } 
+}
+
+@media (max-width: 1024px) {
+    .modal {
+        &__content {
+            max-height: 80vh;
+            max-width: 290px;
+            padding: 20px;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, -10%);
+            &-close-btn {
+                right: 20px;
+                font-size: 14px;
+                color: #141024b3;
+            }
+        }
+        &__card {
+            &-content {
+                gap: 10px;
+                flex-direction: column;
+                &-img {
+                    width: 100px;
+                    margin: 0 auto;
+                }
+                &-text {
+                    text-align: center;
+                    gap: 5px;
+                    &-name {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    &-occupation {
+                        font-size: 14px;
+                    }
+                    &-social {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &-item {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    
+        &__info {
+            &-education {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            &-courses {
+                margin-top: 10px;
+                &-title {
+                    font-size: 20px;
+                }
+                &-details {
+                    margin-top: 10px;
+                }
+            }
+        } 
+    }
+}
