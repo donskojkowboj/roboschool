@@ -299,6 +299,20 @@
                     <button class="modal__tabs-item modal__tabs-item_none">Награды</button>
                 </div>
 
+                <div class="modal__dropdown">
+                <button id="dropdown-btn" class="modal__dropdown-button">
+                        <span id="dropdown-btn-text">Образование</span>              
+                        <svg  id="dropdown-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                        <path d="M4.869 9.63078C4.811 9.57428 4.563 9.36094 4.359 9.1622C3.076 7.99708 0.976 4.95762 0.335 3.36678C0.232 3.12518 0.014 2.51437 0 2.18802C0 1.8753 0.072 1.5772 0.218 1.29274C0.422 0.938139 0.743 0.653678 1.122 0.497808C1.385 0.397467 2.172 0.241598 2.186 0.241598C3.047 0.0857282 4.446 0 5.992 0C7.465 0 8.807 0.0857282 9.681 0.213346C9.695 0.227959 10.673 0.383829 11.008 0.554311C11.62 0.867024 12 1.47784 12 2.13151V2.18802C11.985 2.61374 11.605 3.50901 11.591 3.50901C10.949 5.01413 8.952 7.98344 7.625 9.17681C7.625 9.17681 7.284 9.51291 7.071 9.65904C6.765 9.88699 6.386 10 6.007 10C5.584 10 5.19 9.87238 4.869 9.63078Z" fill="#200E32"/>
+                        </svg>
+                    </button>
+                    <div id="dropdown-menu" class="modal__dropdown-wrapper display-none">
+                        <a href='javascript: void(0)' class="modal__dropdown-item">Образование</a>
+                        <a href='javascript: void(0)' class="modal__dropdown-item">Опыт работы</a>
+                        <a href='javascript: void(0)' class="modal__dropdown-item">Награды</a>
+                    </div>
+                </div>
+
                 <div class="modal__info">
                     <div class="modal__info-education">
                         <p>Сентябрь 1995 — Июнь 2000</p>
@@ -313,13 +327,18 @@
                             <p>Ноябрь 2020 — Февраль 2021</p>
                             <p>Программа дополнительного образования «3D Моделирование» </p>
                             <p>Место проведения: Институт дополнительного образования «Политех»</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vitae eius repudiandae similique aperiam! Ipsum repudiandae nihil vel placeat facilis dolorem reprehenderit quasi non voluptatibus delectus atque adipisci, vero nulla sed eaque commodi, consequatur repellendus provident cumque laborum quisquam natus? Voluptas dignissimos libero magnam dolorem? Corrupti beatae saepe commodi. Omnis voluptatem soluta neque sit et quis cupiditate ex iste repudiandae!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi perferendis voluptate sint tempore placeat unde!</p>
                         </div>
                     </div>
-                    <div class="modal__info_scrollbar">
-                        <div class="modal__info_scrollbar-draggable"></div>
-                    </div>
                 </div>       
-                <button class="modal__content-close-btn" id="modal-close-btn">Закрыть</button> 
+                <button class="modal__content-close-btn" id="modal-close-btn">Закрыть</button>
+                
+                <button class="modal__content-close-btn-mobile" id="modal-close-btn-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <line x1="1.05532" y1="-1.05532" x2="16.6082" y2="-1.05532" transform="matrix(0.681575 0.731748 -0.681575 0.731748 17 10)" stroke="#141024" stroke-width="2.11065" stroke-linecap="round"/>
+                        <line x1="1.05532" y1="-1.05532" x2="16.6082" y2="-1.05532" transform="matrix(0.681575 -0.731748 0.681575 0.731748 17.9609 23)" stroke="#141024" stroke-width="2.11065" stroke-linecap="round"/>
+                        </svg>
+                </button> 
             </div>
         </div>
     </div>
