@@ -3,7 +3,6 @@ const body = document.body,
       backdrop = document.querySelector('#backdrop'),
       openModalBtns = document.querySelectorAll('.trainers__list_item-more'),
       closeModalBtn = document.querySelector('#modal-close-btn'),
-      closeModalBtnMobile = document.querySelector('#modal-close-btn-mobile'),
       dropdownMenu = document.querySelector('#dropdown-menu'),
       dropdownSections = document.querySelectorAll('.modal__dropdown-item'),
       dropdownIcon = document.querySelector('#dropdown-icon'),
@@ -22,13 +21,13 @@ function openModal() {
 
 function openDropdown() {
     dropdownMenu.classList.remove('display-none');
-    dropdownIcon.style.transform = 'skew(180deg) rotate(180deg)';
-    dropdownIcon.style.transition = '0.3s all ease-in-out';
+    dropdownIcon.classList.add('open');
 };
 
 function closeDropDown() {
     dropdownMenu.classList.add('display-none');
-    dropdownIcon.style.transform = 'initial';
+    dropdownIcon.classList.remove('open');
+    dropdownIcon.classList.add('close');
 };
 
 document.addEventListener('keydown', (e) => {
@@ -44,10 +43,6 @@ openModalBtns.forEach(button => {
 });
 
 closeModalBtn.addEventListener('click', () => {
-    closeModal();
-});
-
-closeModalBtnMobile.addEventListener('click', () => {
     closeModal();
 });
 

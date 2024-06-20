@@ -24,14 +24,15 @@
         border-radius: 20px;
         margin: 0 auto;
         background: $white-color;
-        &-close-btn {
+        &-close-btn_desktop {
             position: absolute;
+            top: 40px;
             right: 40px;
             font-size: 18px;
             color: #141024b3;
-            &-mobile {
-                display: none;
-            }
+        }
+        &-close-btn_mobile {
+            display: none;
         }
     }
     
@@ -148,14 +149,14 @@
             height: 100dvh;
             padding: 20px;
             border-radius: 0;
-            &-close-btn {
+            &-close-btn_desktop {
                 display: none;
             }
-            &-close-btn-mobile {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+            &-close-btn_mobile {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
         }
         &__card {
@@ -198,7 +199,7 @@
                 svg {
                     position: absolute;
                     top: 50%;
-                    right: calc(50% - 70px);
+                    margin-left: 10px;
                 }
             }
             &-item {
@@ -212,6 +213,13 @@
                 &:hover {
                     background-color: #E0E0E0;
                 }
+            }
+            .open {
+                transform: rotate(180deg);
+                transition: 0.3s all ease-in-out;
+            }
+            .close {
+                transition: 0.3s all ease-in-out;
             }
         }
     
