@@ -11,17 +11,21 @@ const body = document.body,
 
 function closeModal() {
     modal.classList.add('display-none');
+    modal.classList.remove('display-flex');
     body.classList.remove('no-scroll');
 };
 
 function openModal() {
     modal.classList.remove('display-none');
+    modal.classList.add('display-flex');
     body.classList.add('no-scroll');
 };
 
 function openDropdown() {
     dropdownMenu.classList.remove('display-none');
+    backdrop.classList.remove('display-none');
     dropdownIcon.classList.add('open');
+    dropdownIcon.classList.remove('close');
 };
 
 function closeDropDown() {

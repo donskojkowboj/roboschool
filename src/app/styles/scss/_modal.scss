@@ -1,45 +1,34 @@
 @import 'variables';
 
 .modal {
+    position: fixed;
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     &__backdrop {
-        position: fixed;
-        left: 0;
+        position: absolute;
         top: 0;
-        z-index: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
         background: #14102466;
     }
     &__content {
-        position:fixed;
-        max-height: 80vh;
-        scrollbar-width: none;
-        display: flex;
-        z-index: 1100;
-        padding: 40px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 940px;
-        border-radius: 20px;
-        margin: 0 auto;
-        background: $white-color;
-        &-close-btn_desktop {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            font-size: 18px;
-            color: #141024b3;
-        }
-        &-close-btn_mobile {
-            display: none;
-        }
-    }
-    
-    &__card {
+        position: relative;
+        overflow-y: hidden;
         display: flex;
         flex-direction: column;
-        &-content {
+        max-height: 90vh;
+        padding: 40px;
+        width: 940px;
+        border-radius: 20px;
+        background: $white-color;
+        &-wrapper {
             display: flex;
             gap: 40px;
             &-img {
@@ -69,68 +58,73 @@
                 }
             }
         }
+        &-close-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            &_desktop {
+                font-size: 18px;
+                color: #141024b3;
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+
+        &-info {
+            margin-top: 20px;
+            position: relative;
+            overflow-y: auto;
+            z-index: 900;
+            padding-right: 15px;
+            &::-webkit-scrollbar {
+                width: 5px;
+                border-radius: 40px;
+                background-color: #14102414;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 40px;
+                background-color: #141024;
+            }
+            &-text {
+                font-size: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+            &-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        } 
     }
 
     &__tabs {
         position: relative;
         display: flex;
-        justify-content: space-between;
-        padding-top: 40px;
-        padding-bottom: 20px;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        border-bottom: 1px solid #1410241c;
         &-item {
-            width: calc(100% / 3);
+            max-width: calc(100% / 3);
+            flex-grow: 1;
             font-size: 20px;
+            padding: 20px 0;
+            text-align: left;
             &_chosen {
                 color: $red-color;
             }
-            &_none {
+            &_disabled {
                 color: #14102433;
+                pointer-events: none;
             }
-        }
-        &:after {
-            content: '';
-            height: 1px;
-            width: 100%;
-            background: #1410241c;
-            display: block;
-            position: absolute;
-            bottom: 0;
         }
     }
     &__dropdown {
         display: none;
     }
 
-    &__info {
-        margin-top: 20px;
-        position: relative;
-        overflow-y: auto;
-        max-height: 80vh;
-        &::-webkit-scrollbar {
-            width: 5px;
-            border-radius: 40px;
-            background-color: #14102414;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 40px;
-            background-color: #141024;
-        }
-        &-education {
-            font-size: 20px;
-            padding-right: 15px;
-        }
-        &-courses {
-            margin-top: 40px;
-            padding-right: 15px;
-            &-title {
-                font-size: 24px;
-            }
-            &-details {
-                margin-top: 20px;
-                font-size: 20px;
-            }
-        }
-    } 
+
 }
 
 @media (max-width: 1024px) {
@@ -142,25 +136,14 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal {        
         &__content {
-            max-width: 100%;
-            max-height: 100dvh;
-            height: 100dvh;
             padding: 20px;
+            height: 100dvh;
+            max-height: 100dvh;
+            max-width: 100%;
             border-radius: 0;
-            &-close-btn_desktop {
-                display: none;
-            }
-            &-close-btn_mobile {
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
-        &__card {
-            &-content {
+            &-wrapper {
                 gap: 10px;
                 &-img {
                     width: 80px;
@@ -176,6 +159,29 @@
                     &-social {
                         gap: 5px;
                     }
+                }
+            }
+            &-close-btn {
+                top: 0;
+                right: 0;
+                &_desktop {
+                    display: none;
+                }
+                &_mobile {
+                    display: block;
+                }
+            }
+            &-info {
+                &-text {
+                    font-size: 14px;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+                &-title {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    font-weight: 600;
                 }
             }
         }
@@ -199,10 +205,19 @@
                 svg {
                     position: absolute;
                     top: 50%;
-                    margin-left: 10px;
+                    transform: translateY(-50%);
+                    margin-left: 6px;
+                }
+                .open {
+                    transform:  translateY(-50%) rotate(180deg);
+                    transition: 0.3s all ease-in-out;
+                }
+                .close {
+                    transition: 0.3s all ease-in-out;
                 }
             }
             &-item {
+                background-color: #F7F7F7;
                 width: 100%;
                 text-align: center;
                 padding: 10px 0;
@@ -210,33 +225,12 @@
                 text-decoration: none;
                 display: block;
                 transition: all 0.3s ease-in-out;
+                &_disabled {
+                    color: #14102433;
+                    pointer-events: none;
+                }
                 &:hover {
                     background-color: #E0E0E0;
-                }
-            }
-            .open {
-                transform: rotate(180deg);
-                transition: 0.3s all ease-in-out;
-            }
-            .close {
-                transition: 0.3s all ease-in-out;
-            }
-        }
-    
-        &__info {
-            &-education {
-                font-size: 14px;
-                padding-right: 15px;
-            }
-            &-courses {
-                margin-top: 40px;
-                padding-right: 15px;
-                &-title {
-                    font-size: 16px;
-                }
-                &-details {
-                    margin-top: 20px;
-                    font-size: 14px;
                 }
             }
         }
