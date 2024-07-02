@@ -16,7 +16,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        background: #14102466;
+        background: $bg-color-backdrop;
     }
     &__content {
         position: relative;
@@ -27,7 +27,7 @@
         padding: 40px;
         width: 940px;
         border-radius: 20px;
-        background: $white-color;
+        background: $text-color-tertiary;
         &-wrapper {
             display: flex;
             gap: 40px;
@@ -44,7 +44,7 @@
                     font-weight: 600;
                 }
                 &-occupation {
-                    color: #141024b3;
+                    color: $text-color-primary-70;
                     font-size: 18px;
                 }
                 &-social {
@@ -64,7 +64,7 @@
             right: 40px;
             &_desktop {
                 font-size: 18px;
-                color: #141024b3;
+                color: $text-color-primary-70;
             }
             &_mobile {
                 display: none;
@@ -80,11 +80,11 @@
             &::-webkit-scrollbar {
                 width: 5px;
                 border-radius: 40px;
-                background-color: #14102414;
+                background-color: $scroll-bg-color;
             }
             &::-webkit-scrollbar-thumb {
                 border-radius: 40px;
-                background-color: #141024;
+                background-color: $scroll-thumb-color;
             }
             &-text {
                 font-size: 20px;
@@ -104,18 +104,17 @@
         display: flex;
         justify-content: space-evenly;
         padding-top: 20px;
-        border-bottom: 1px solid #1410241c;
+        border-bottom: 1px solid $border-color-tabs;
         &-item {
             max-width: calc(100% / 3);
             flex-grow: 1;
             font-size: 20px;
             padding: 20px 0;
-            text-align: left;
-            &_chosen {
-                color: $red-color;
+            &_active {
+                color: $text-color-secondary;
             }
             &_disabled {
-                color: #14102433;
+                color: $text-color-disabled;
                 pointer-events: none;
             }
         }
@@ -193,14 +192,15 @@
             margin-top: 20px;
             display: flex;
             flex-direction: column;
+            position: relative;
             &-button {
                 position: relative;
-                background: $red-color;
-                color: $white-color;
+                background: $button-color-primary;
+                color: $text-color-tertiary;
                 padding: 10px 0;
                 font-size: 16px;
                 &:hover {
-                    background: #a2181d;
+                    background: $button-hover-primary;
                 }
                 svg {
                     position: absolute;
@@ -216,21 +216,25 @@
                     transition: 0.3s all ease-in-out;
                 }
             }
-            &-item {
-                background-color: #F7F7F7;
+            &-wrapper {
+                position: absolute;
                 width: 100%;
-                text-align: center;
+                top: 100%;
+                z-index: 1000;
+                flex-direction: column;
+            }
+            &-item {
+                background-color: $dropdown-bg-color;
+                width: 100%;
                 padding: 10px 0;
                 font-size: 16px;
-                text-decoration: none;
-                display: block;
                 transition: all 0.3s ease-in-out;
                 &_disabled {
-                    color: #14102433;
+                    color: $button-disabled;
                     pointer-events: none;
                 }
                 &:hover {
-                    background-color: #E0E0E0;
+                    background-color: $dropdown-hover-color;
                 }
             }
         }

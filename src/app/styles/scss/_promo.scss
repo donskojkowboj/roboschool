@@ -1,13 +1,13 @@
 @import './variables.scss';
 .promo {
     position: relative;
-    background: $dark-color;  
+    background: $bg-color-primary;  
     height: calc(100vh - 108px);
     max-height: 972px;
     padding: 0;
     overflow: hidden;
     &__content {
-        color: $white-color;
+        color: $text-color-tertiary;
         display: flex;
         flex-direction: column;
         justify-content: center;

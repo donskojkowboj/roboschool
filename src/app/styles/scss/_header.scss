@@ -1,7 +1,7 @@
 @import './variables';
 
 .header {
-    background: $dark-color; 
+    background: $bg-color-primary; 
     top: 0;
     padding: 30px 0;
     position: sticky;   
@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: $white-color;
+        color: $text-color-tertiary;
     }
     .menu {
         padding: 0 20px;
@@ -24,8 +24,8 @@
                 line-height: 0;
                 z-index: 900;
                 border: 1px solid transparent;
-                background: linear-gradient(#1B172B, #1B172B) padding-box,
-                            linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+                background: $icon-gradient-padding padding-box,
+                $icon-gradient-border border-box;
                 border-radius: 10px;
             }
         }
@@ -39,8 +39,8 @@
                 line-height: 0;
                 padding: 11px;
                 border: 1px solid transparent;
-                background: linear-gradient(#1B172B, #1B172B) padding-box,
-                            linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+                background: $icon-gradient-padding padding-box,
+                            $icon-gradient-border border-box; 
                 border-radius: 10px;
             }           
         }
@@ -50,23 +50,23 @@
         line-height: 0;
         z-index: 900;
         border: 1px solid transparent;
-        background: linear-gradient(#1B172B, #1B172B) padding-box,
-                    linear-gradient(to bottom, #FFFFFF66, #FFFFFF14) border-box; 
+        background: $icon-gradient-padding padding-box,
+                    $icon-gradient-border border-box; 
         border-radius: 10px;
         .button_burger {
             &:active {
                 border: 1px solid transparent;
                 border-radius: 10px;
-                background-color: #0F0D1A;
-                box-shadow: 0 0 10px #0000001A;
+                background-color: $button-color-active;
+                box-shadow: 0 0 10px $shadow-burger;
             }
         }
         .button_close {
             &:active {
                 border: 1px solid transparent;
                 border-radius: 10px;
-                background-color: #0F0D1A;
-                box-shadow: 0 0 10px #0000001A;
+                background-color: $button-color-active;
+                box-shadow: 0 0 10px $shadow-burger;
             }
         }
     }
@@ -97,7 +97,7 @@
                 flex-direction: column;
                 justify-content: center;
                 gap: 20px;
-                background-color: $dark-color;
+                background-color: $bg-color-primary;
                 &_item {
                     font-size: 30px;
                     font-weight: 600;

@@ -181,7 +181,7 @@
 
             <div class="trainers__buttons">
                 <div class="trainers__buttons_scrollbar">
-                    <div class="trainers__buttons_scrollbar_scroll"></div>
+                    <div class="trainers__buttons_scrollbar_thumb"></div>
                 </div>
 
                 <div class="trainer__buttons_arrows">
@@ -293,9 +293,9 @@
             </div>
 
             <div class="modal__tabs">
-                <button class="modal__tabs-item modal__tabs-item_chosen">Образование</button>
-                <button class="modal__tabs-item">Опыт работы</button>
-                <button class="modal__tabs-item modal__tabs-item_disabled">Награды</button>
+                <button data-tab-button="1" class="modal__tabs-item">Образование</button>
+                <button data-tab-button="2" class="modal__tabs-item">Опыт работы</button>
+                <button data-tab-button="3" class="modal__tabs-item">Награды</button>
             </div>
 
             <div class="modal__dropdown">
@@ -306,13 +306,13 @@
                     </svg>
                 </button>
                 <div id="dropdown-menu" class="modal__dropdown-wrapper display-none">
-                    <button class="modal__dropdown-item">Образование</button>
-                    <button class="modal__dropdown-item">Опыт работы</button>
-                    <button class="modal__dropdown-item modal__dropdown-item_disabled">Награды</button>
+                    <button data-tab-button="1" class="modal__dropdown-item">Образование</button>
+                    <button data-tab-button="2" class="modal__dropdown-item">Опыт работы</button>
+                    <button data-tab-button="3" class="modal__dropdown-item">Награды</button>
                 </div>
             </div>
 
-            <div class="modal__content-info">
+            <div data-tab-content="1" class="modal__content-info">
                 <div class="modal__content-info-text">
                     <p>Сентябрь 1995 — Июнь 2000</p>
                     <p>Санкт-Петербургский политехнический университет Петра Великого</p>
@@ -328,6 +328,40 @@
                     <p>Программа дополнительного образования «3D Моделирование» </p>
                     <p>Место проведения: Институт дополнительного образования «Политех»</p>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vitae eius repudiandae similique aperiam! Ipsum repudiandae nihil vel placeat facilis dolorem reprehenderit quasi non voluptatibus delectus atque adipisci, vero nulla sed eaque commodi, consequatur repellendus provident cumque laborum quisquam natus? Voluptas dignissimos libero magnam dolorem? Corrupti beatae saepe commodi. Omnis voluptatem soluta neque sit et quis cupiditate ex iste repudiandae!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi perferendis voluptate sint tempore placeat unde!</p>
+                </div>
+            </div>
+
+            <div data-tab-content="2" class="modal__content-info">
+                <div class="modal__content-info-text">
+                    <p>Air plant banjo artisan vape. You probably haven't heard of them cold-pressed gastropub butcher freegan vinyl.</p>
+                    <p>La croix fit pariatur green juice. In bruh umami, kale chips hell of farm-to-table etsy mustache anim marfa retro nulla.</p>
+                    <p>Vexillologist plaid sartorial aesthetic scenester, raw denim enamel pin hoodie neutra magna nisi selfies brunch.</p>
+                </div>
+
+                <h3 class="modal__content-info-title">Some random shit</h3>
+
+                <div class="modal__content-info-text">
+                    <p>Ноябрь 9999 — Февраль 1065</p>
+                    <p>Put a bird on it quis air plant artisan pickled commodo, ethical migas jianbing hammock tumblr aliqua viral.</p>
+                    <p>Pitchfork lomo tilde, organic XOXO pork belly four dollar toast yuccie green juice ipsum keytar. Woke knausgaard YOLO, labore mukbang dolore umami ullamco jean shorts ut.</p>
+                    <p>Deep v JOMO subway tile paleo. Ethical laborum hell of retro literally.</p>
+                </div>
+            </div>
+
+            <div data-tab-content="3" class="modal__content-info">
+                <div class="modal__content-info-text">
+                    <p>Aliqua excepteur +1 polaroid banh mi cred taxidermy edison bulb health goth keffiyeh helvetica next level farm-to-table heirloom.</p>
+                    <p>Marfa praxis pitchfork ex williamsburg artisan cold-pressed literally sriracha bruh coloring book chicharrones sint four loko whatever.</p>
+                    <p>Helvetica meh lomo, sus green juice seitan culpa pok pok yuccie occupy.</p>
+                </div>
+
+                <h3 class="modal__content-info-title">Meaningless title 666</h3>
+
+                <div class="modal__content-info-text">
+                    <p>Lyft id DSA et incididunt JOMO shabby chic same. Live-edge big mood meditation pop-up. </p>
+                    <p>Kinfolk cold-pressed poutine deserunt franzen.</p>
+                    <p>Praxis meh beard, cornhole fixie gatekeep mlkshk in gentrify selvage duis fit swag.</p>
+                    <p>Irony venmo mixtape banh mi yr meditation sus iPhone vice shaman.</p>
                 </div>
             </div>
 

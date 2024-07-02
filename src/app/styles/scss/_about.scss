@@ -17,12 +17,13 @@
         &_item {
             flex-basis: 260px;
             &-number {
-                color: $red-color;
+                color: $text-color-secondary;
                 font-size: 70px;
                 font-weight: 600;
             }
             &-descr {
                 font-size: 18px;
+                color: $text-color-primary-70;
             }
         }
     }

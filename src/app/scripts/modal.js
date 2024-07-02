@@ -3,6 +3,8 @@ const body = document.body,
       backdrop = document.querySelector('#backdrop'),
       openModalBtns = document.querySelectorAll('.trainers__list_item-more'),
       closeModalBtn = document.querySelector('#modal-close-btn'),
+      tabs = document.querySelectorAll('.modal__tabs-item'),
+      tabsContent = document.querySelectorAll('.modal__content-info'),
       dropdownMenu = document.querySelector('#dropdown-menu'),
       dropdownSections = document.querySelectorAll('.modal__dropdown-item'),
       dropdownIcon = document.querySelector('#dropdown-icon'),
@@ -13,6 +15,8 @@ function closeModal() {
     modal.classList.add('display-none');
     modal.classList.remove('display-flex');
     body.classList.remove('no-scroll');
+    hideAllContentItems();
+    showTabContent(0);
 };
 
 function openModal() {
@@ -23,6 +27,7 @@ function openModal() {
 
 function openDropdown() {
     dropdownMenu.classList.remove('display-none');
+    dropdownMenu.classList.add('display-flex')
     backdrop.classList.remove('display-none');
     dropdownIcon.classList.add('open');
     dropdownIcon.classList.remove('close');
@@ -30,9 +35,10 @@ function openDropdown() {
 
 function closeDropDown() {
     dropdownMenu.classList.add('display-none');
+    dropdownMenu.classList.remove('display-flex')
     dropdownIcon.classList.remove('open');
     dropdownIcon.classList.add('close');
-};
+}
 
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Escape' && !modal.classList.contains('display-none')) {
@@ -62,10 +68,47 @@ dropdownBtn.addEventListener('click', () => {
     closeDropDown();
 });
 
-dropdownSections.forEach(section => {
+dropdownSections.forEach((section, i) => {
     let text = section.textContent;
     section.addEventListener('click', () => {
         dropdownBtnText.textContent = text;
         closeDropDown();
+            if (tabsContent[i].getAttribute('data-tab-content') === section.getAttribute('data-tab-button')) {
+            hideAllContentItems();
+            showTabContent(i);
+        }
     });
 });
+
+function scrollToTop(tabContentItem) {
+    tabContentItem.scrollTop = 0;
+}
+
+function showTabContent(index) {
+    let text = tabs[index].textContent;
+    tabsContent[index].classList.remove('display-none');
+    tabs[index].classList.add('modal__tabs-item_active');
+    dropdownBtnText.textContent = text;
+    scrollToTop(tabsContent[index]);
+}
+
+function hideAllContentItems() {
+    tabsContent.forEach(content => content.classList.add('display-none'));
+    tabs.forEach(tab => tab.classList.remove('modal__tabs-item_active'));
+}
+
+tabs.forEach((tab, i) => {
+    tab.classList.remove('modal__tabs-item_active');
+    tabs[0].classList.add('modal__tabs-item_active');
+    tab.addEventListener('click', () => {
+        let text = tab.textContent;
+        dropdownBtnText.textContent = text;
+        if (tabsContent[i].getAttribute('data-tab-content') === tab.getAttribute('data-tab-button')) {
+            hideAllContentItems();
+            showTabContent(i);
+        }
+    });
+});
+
+hideAllContentItems();
+showTabContent(0);
