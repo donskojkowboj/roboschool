@@ -11,7 +11,7 @@ const body = document.body,
       dropdownBtn = document.querySelector('#dropdown-btn'),
       dropdownBtnText = document.querySelector('#dropdown-btn-text');
 
-function closeModal() {
+const closeModal = () => {
     modal.classList.add('display-none');
     modal.classList.remove('display-flex');
     body.classList.remove('no-scroll');
@@ -19,13 +19,13 @@ function closeModal() {
     showTabContent(0);
 };
 
-function openModal() {
+const openModal = () => {
     modal.classList.remove('display-none');
     modal.classList.add('display-flex');
     body.classList.add('no-scroll');
 };
 
-function openDropdown() {
+const openDropdown = () => {
     dropdownMenu.classList.remove('display-none');
     dropdownMenu.classList.add('display-flex')
     backdrop.classList.remove('display-none');
@@ -33,7 +33,7 @@ function openDropdown() {
     dropdownIcon.classList.remove('close');
 };
 
-function closeDropDown() {
+const closeDropDown = () => {
     dropdownMenu.classList.add('display-none');
     dropdownMenu.classList.remove('display-flex')
     dropdownIcon.classList.remove('open');
@@ -54,6 +54,7 @@ openModalBtns.forEach(button => {
 
 closeModalBtn.addEventListener('click', () => {
     closeModal();
+    closeDropDown()
 });
 
 backdrop.addEventListener('click', () => {
@@ -73,18 +74,18 @@ dropdownSections.forEach((section, i) => {
     section.addEventListener('click', () => {
         dropdownBtnText.textContent = text;
         closeDropDown();
-            if (tabsContent[i].getAttribute('data-tab-content') === section.getAttribute('data-tab-button')) {
+        if (tabsContent[i].getAttribute('data-tab-content') === section.getAttribute('data-tab-button')) {
             hideAllContentItems();
             showTabContent(i);
         }
     });
 });
 
-function scrollToTop(tabContentItem) {
+const scrollToTop = (tabContentItem) => {
     tabContentItem.scrollTop = 0;
 }
 
-function showTabContent(index) {
+const showTabContent = (index) => {
     let text = tabs[index].textContent;
     tabsContent[index].classList.remove('display-none');
     tabs[index].classList.add('modal__tabs-item_active');
@@ -92,9 +93,13 @@ function showTabContent(index) {
     scrollToTop(tabsContent[index]);
 }
 
-function hideAllContentItems() {
-    tabsContent.forEach(content => content.classList.add('display-none'));
-    tabs.forEach(tab => tab.classList.remove('modal__tabs-item_active'));
+const hideAllContentItems = () => {
+    tabsContent.forEach(content => {
+        content.classList.add('display-none');
+    });
+    tabs.forEach(tab => {
+        tab.classList.remove('modal__tabs-item_active');
+    });
 }
 
 tabs.forEach((tab, i) => {
