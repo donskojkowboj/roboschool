@@ -82,7 +82,7 @@ section {
     &.button-dark {
         background: $button-color-secondary;
         &:hover {
-            background: $button-hover-secondary;
+            background: $button-color-active;
         }
     }
 }
