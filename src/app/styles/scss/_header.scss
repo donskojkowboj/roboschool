@@ -12,7 +12,7 @@
         align-items: center;
         color: $text-color-tertiary;
     }
-    .menu {
+    .menu-desktop {
         padding: 0 20px;
         &__list {
             display: flex;
@@ -29,6 +29,9 @@
                 border-radius: 10px;
             }
         }
+    }
+    .menu-mobile {
+        display: none;
     }
     .burger__menu {
         display: none;
@@ -84,7 +87,11 @@
 @media (max-width: 1024px) {
     .header {
         padding: 20px 0;
-        .menu {
+        .menu-desktop {
+            display: none;
+        }
+        .menu-mobile {
+            display: block;
             &__list {
                 visibility: hidden;
                 position: fixed;
