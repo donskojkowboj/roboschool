@@ -29,7 +29,6 @@
     ]
   },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/plugin-transform-modules-commonjs": "^7.23.3",
@@ -44,6 +43,7 @@
     "babel-plugin-transform-commonjs": "^1.1.6",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-plugin-transform-replace-expressions": "^0.2.0",
+    "caniuse-lite": "^1.0.30001640",
     "copy-webpack-plugin": "latest",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
