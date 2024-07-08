@@ -27,10 +27,10 @@
             }
             &-descr {
                 font-size: 18px;
-                color: #141024b3;
+                color: $text-color-primary-70;
             }
             &-more {
-                color: $red-color;
+                color: $text-color-secondary;
                 align-self: flex-start;
                 font-size: 18px;
                 padding-top: 10px;
@@ -53,12 +53,12 @@
             width: 360px;
             height: 5px;
             border-radius: 40px;
-            background: #14102414;
-            &_scroll {
+            background: $scroll-bg-color;
+            &_thumb {
                 width: 260px;
                 height: 5px;
                 border-radius: 40px;
-                background: $dark-color;
+                background: $scroll-thumb-color;
             }
         }
     }

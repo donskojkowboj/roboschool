@@ -1,3 +1,41 @@
-$dark-color: #141024;
-$red-color: #D52027;
-$white-color: #FFF;
+$primary-color: #141024;
+$secondary-color: #D52027;
+$tertiary-color: #FFF;
+$grayed-out-color: #14102433;
+
+
+$text-color-primary: $primary-color;
+$text-color-primary-70: #141024b3;
+$text-color-secondary: $secondary-color;
+$text-color-tertiary: $tertiary-color;
+$text-color-tertiary-70: #ffffffb3;
+$text-color-disabled: $grayed-out-color;
+
+$bg-color-primary: $primary-color;
+$bg-color-secondary: $secondary-color;
+$bg-color-tertiary: #F9F9F9;
+$bg-color-backdrop: #14102466;
+$bg-color-white: $tertiary-color;
+
+$button-color-primary: $secondary-color;
+$button-hover-primary: #a2181d;
+$button-color-secondary: $primary-color;
+$button-color-active: #0F0D1A;
+$button-disabled: $grayed-out-color;
+
+$dropdown-bg-color: #F7F7F7;
+$dropdown-hover-color: #E0E0E0;
+
+$shadow-burger: #0000001A;
+$shadow-tooltip-descr: #1410241a;
+
+$scroll-bg-color: #14102414;
+$scroll-thumb-color: $primary-color;
+
+$border-color-tabs: #1410241c;
+$border-color-card: $grayed-out-color;
+
+$input-bg-color: $tertiary-color;
+
+$icon-gradient-border: linear-gradient(to bottom, #FFFFFF66, #FFFFFF14);
+$icon-gradient-padding: linear-gradient(#1B172B, #1B172B);

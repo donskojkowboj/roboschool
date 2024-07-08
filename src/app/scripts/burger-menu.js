@@ -2,15 +2,17 @@ const body = document.body,
       openBurgerBtn = document.querySelector('#open-burger-btn'),
       closeBurgerBtn = document.querySelector('#close-burger-btn'),
       menuList = document.querySelector('#menu-list'),
-      menuLinks = document.querySelectorAll('.menu__list_item a');
+      menuLinks = document.querySelectorAll('.menu-mobile__list_item a');
         
-function enableScroll() {
+
+const enableScroll = () => {
     body.classList.remove('no-scroll');
 };
-function disableScroll() {
+const disableScroll = () => {
     body.classList.add('no-scroll');
 };
 
+menuList.style.visibility = 'hidden';
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuList.style.visibility = 'hidden';
@@ -27,11 +29,10 @@ openBurgerBtn.addEventListener('click', () => {
     disableScroll();
 });
 
+
 closeBurgerBtn.addEventListener('click', () => {
     openBurgerBtn.classList.remove('display-none');
     closeBurgerBtn.classList.add('display-none');
     menuList.style.visibility = 'hidden';
     enableScroll();
 });
-
-

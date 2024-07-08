@@ -18,7 +18,7 @@
             border-radius: 20px;
             justify-content: space-between;
             text-align: center;
-            border: 1px solid #14102433;
+            border: 1px solid $border-color-card;
             transition: background-color 0.4s ease-in-out,
                         color 0.4s ease-in-out,
                         transform 0.4s ease-in-out;
@@ -34,7 +34,7 @@
                     content: "";
                     width: 19px;
                     height: 3px;
-                    background-color: #141024;
+                    background-color: $bg-color-primary;
                     top: 50%; 
                     transform: translateY(-50%);   
                     transition: all 0.4s ease-in-out;
@@ -58,15 +58,15 @@
             &-button {
                 font-size: 18px;
                 margin-top: 61px;
-                color: $white-color;
+                color: $text-color-tertiary
             }
             &:hover {
-                background-color: $dark-color;
-                color: $white-color;
+                background-color: $bg-color-primary;
+                color: $text-color-tertiary;
                 transform: scale(1.05);
                 .package__cards_item-title:before,
                 .package__cards_item-title:after {
-                    background-color: #fff;
+                    background-color: $bg-color-tertiary;
                 }
             }
         }

@@ -1,8 +1,8 @@
 @import './variables';
 
 .footer {
-    background: $dark-color;   
-    color: $white-color;
+    background: $bg-color-primary;   
+    color: $text-color-tertiary;
     padding: 40px 0;
     &__content {
         display: flex;
@@ -14,7 +14,7 @@
         gap: 10px;
     }
     &__copyright {
-        color: #ffffffb3;
+        color: $text-color-tertiary-70;
         font-size: 16px;
     }
     &__phone {
