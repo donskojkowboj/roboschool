@@ -49,20 +49,35 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        svg {
+            &:hover {
+                scale: 1.06;
+                path {
+                    fill: $button-hover-primary;
+                }
+            };
+        }
         &_scrollbar {
+            position: relative;
             width: 360px;
             height: 5px;
             border-radius: 40px;
             background: $scroll-bg-color;
             &_thumb {
+                position: absolute;
                 width: 260px;
                 height: 5px;
                 border-radius: 40px;
                 background: $scroll-thumb-color;
+                cursor: grab;
+                &:hover {
+                    scale: 1.02;
+                }
             }
         }
     }
 }
+
 
 @media (max-width: 1024px) {
     .trainers {
