@@ -4,6 +4,7 @@ const slider = document.querySelector('#slider'),
       thumb = document.querySelector('#scrollbar-thumb');
 
 let maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+thumb.style.width = `${slider.clientWidth * 100 / slider.scrollWidth}%`;
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
