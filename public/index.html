@@ -252,11 +252,11 @@
                     <p class="course__container-descr">Акция действительна до 10 марта 2022 года</p>
                 </div>
 
-                <form action="submit" class="course__container-form">
-                    <input placeholder="Имя" class="course__container-input" type="text">
-                    <input placeholder="Телефон" class="course__container-input" type="tel">
-                    <input placeholder="E-mail" class="course__container-input" type="email">
-                    <button type="submit" class="button button-dark course__container-button">Оформить заявку</button>
+                <form id="form" action="submit" class="course__container-form">
+                    <input id="name" required minlength="2" placeholder="Имя" class="course__container-input" type="text">
+                    <input id="phone" required minlength="17" maxlength="18" placeholder="Телефон" class="course__container-input" type="tel">
+                    <input id="email" required placeholder="E-mail" class="course__container-input" type="email">
+                    <button id="submit-btn" type="submit" class="button button-dark course__container-button">Оформить заявку</button>
                 </form>
             </div>
         </div>
