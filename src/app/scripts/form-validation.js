@@ -5,7 +5,8 @@ const form = document.querySelector('#form'),
       emailInput = document.querySelector('#email');
 
 const regexName = new RegExp(/^[\u0400-\u04FF]{2,}$/);
-const regexEmail = new RegExp(/\w+@\w+\.\w+/);
+const regexEmail = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+const regexOnlyDigits = new RegExp(/\D/g);
 
 formInputs.forEach((input, i) => {
     input.addEventListener('keydown', (e) => {
@@ -22,6 +23,10 @@ formInputs.forEach((input, i) => {
     });
 });
 
+const getInputNumbersValue = (input) => {
+    return input.value.replace(regexOnlyDigits, '');
+};
+
 const handlePhoneInput = (e) => {
     let input = e.target,
         inputNumbersValue = getInputNumbersValue(input),
@@ -31,9 +36,9 @@ const handlePhoneInput = (e) => {
     if (!inputNumbersValue) {
         return input.value = '';
     }
-    console.log(phoneInput.value.trim().length);
+
     if (input.value.length != selectionStart) {
-        if (e.data && /\D/g.test(e.data)) {
+        if (e.data && regexOnlyDigits.test(e.data)) {
             input.value = inputNumbersValue;
         }
         return;
@@ -41,11 +46,11 @@ const handlePhoneInput = (e) => {
 
     if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
         if (inputNumbersValue[0] == '9') {
-            inputNumbersValue = '7'+ inputNumbersValue;
+            inputNumbersValue = '7' + inputNumbersValue;
         } 
         let firstSymbols = (inputNumbersValue[0] == '8') ? '8' : '+7';
         formattedInputValue = firstSymbols + ' ';
-
+        
         if (inputNumbersValue.length > 1) {
             formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
         }
@@ -62,34 +67,29 @@ const handlePhoneInput = (e) => {
     input.value = formattedInputValue;
 };
 
-const getInputNumbersValue = (input) => {
-    return input.value.replace(/\D/g, '');
-}
-
 const handleKeydown = (e) => {
     let input = e.target;
     if (e.keyCode == 8 && getInputNumbersValue(input).length == 1) {
         input.value = '';
     }
-}
+};
 
 const handlePaste = (e) => {
     let pasted = e.clipboardData || window.clipboardData,
         input = e.target,
         inputNumbersValue = getInputNumbersValue(input);
-
-        if (pasted) {
-            let pastedText = pasted.getData('Text');
-            if (/\D/g.test(pastedText)) {
-                input.value = inputNumbersValue;
-            }
+    if (pasted) {
+        let pastedText = pasted.getData('Text');
+        if (regexOnlyDigits.test(pastedText)) {
+            input.value = inputNumbersValue;
         }
-}
+    }
+};
 
 const handleSubmit = () => {
     regexName.test(nameInput.value) && regexEmail.test(emailInput.value) && phoneInput.value.trim().length >= 17 ? 
     console.log(`Имя пользователя: ${nameInput.value},\nНомер телефона: ${phoneInput.value},\nПочта: ${emailInput.value}`) : 
-    alert('Неверно введены данные')
+    alert('Неверно введены данные');
 };
 
 phoneInput.addEventListener('input', handlePhoneInput);
